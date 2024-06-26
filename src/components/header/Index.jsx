@@ -55,7 +55,7 @@ function Index() {
                         <a href="#"> <button class=" search-icon" type="submit"> <i class="fas fa-magnifying-glass"></i></button></a>
                        <div className="login-sell">
                         <Link to="./Login"> <button className="btn login" >Login</button></Link>
-                        <Link to="./Login"><button className="btn sell" ><span><i class="fa-solid fa-plus"></i> </span> Sell</button></Link>
+                        <Link to="./Signup"><button className="btn sell" ><span><i class="fa-solid fa-plus"></i> </span> Sell</button></Link>
                         </div>
                     </form>
                     <hr />
