@@ -1,0 +1,27 @@
+.buttonn,form input {
+    width: 15rem;
+    height: 2.5rem;
+    font-weight: 100;
+    margin: auto;
+    
+}
+
+.loglink {
+    margin-top: auto;
+    margin-left: 11rem;
+}
+
+form label {
+    margin-right: 10rem;
+}
+
+.form-error {
+    color: red;
+    font-weight: lighter;
+    
+}
+
+/* form input{
+    height: 2.5rem ;
+    width: 15rem;
+} */

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+
+body {
+    overflow-x: hidden;
+}
+
+.olx {
+    font-weight: bolder;
+    font-family: 'Nunito', sans-serif;
+    color: #002f34;
+    margin-left: 0.5rem;
+
+}
+
+.fa-car {
+    color: #002f34;
+    font-size: 2rem;
+
+
+
+}
+
+.fa-building {
+    color: #002f34;
+    font-size: 2rem;
+    margin-right: 70rem;
+
+}
+
+.icon-text {
+    font-size: 1rem;
+    /* font-weight: lighter;  */
+    margin: auto;
+    padding: auto;
+    padding-left: 0.5rem;
+    font-family: monospace;
+
+}
+
+.fa-car:hover,
+.fa-building:hover {
+    color: #3a77ff
+}
+
+.select-container {
+    position: relative;
+    display: inline-block;
+    /* height: 3px; */
+}
+
+.select-container .fas {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.select-container select {
+    padding-left: 25px;
+    margin-left: 2rem;
+    font-size: 16px;
+    font-weight: bold;
+    width: 330px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.search-icon {
+    background-color: #002f34;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 3rem;
+    height: 2.8rem;
+    /* margin-right: 5rem; */
+}
+
+.search-bar {
+    border-radius: 3px;
+    width: 30rem;
+    height: 2.8rem;
+    border: 1px solid #ccc;
+
+}
+
+.search {
+    margin-right: 12rem;
+}
+
+.login {
+    margin-left: 2rem;
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: 500;
+  color: #002f34;
+    
+}
+.login:hover {
+    margin-left: 2rem;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 2ms;
+  font-weight: 500;
+  color: #002f34;
+    
+}
+.sell{
+    margin-left: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+    border: 4px solid;
+    border-radius: 20px;
+    border-color:#23e5db #3a77ff #ffce32 ;
+    border-width: 5px;
+    color: #002f34;
+
+}
+.sell:hover{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 4rem;
+    font-size: 16px;
+    font-weight: 500;
+    border: 4px solid;
+    border-radius: 20px;
+    border-color:#23e5db #3a77ff #ffce32 ;
+    border-width: 5px;
+    color: #002f34;
+
+}
+.secondary-tab{
+    justify-content: space-between;
+    /* border: #ffce32 2px solid; */
+}
+
+hr {
+    width: 100%;
+
+}
