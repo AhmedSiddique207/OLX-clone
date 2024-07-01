@@ -1,21 +1,13 @@
-import React  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Login from "./Login";
-import { style } from "./style.css"
+import "./style.css"
 
 
 function Index() {
 
     return (
 
-        <div  >
-
-
-
-
-
-
-
+        <div>
             <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
                     <a class="navbar-brand olx me-5 pe-5" href="https://olx.com.pk" target="_blank">  <h1 className="olx"><span>OLX</span></h1></a>
@@ -38,7 +30,8 @@ function Index() {
 
 
             <nav class="navbar secondary-tab">
-                <div class="container-fluid">
+                <div class="container-fluid ">
+
                     <div class="select-container">
                         <i class="fas fa-location-dot"></i>
                         <select name="options" id="options" class="fw-bold ">
@@ -50,18 +43,23 @@ function Index() {
                             <option value="option6">Gilgit Baltistan</option>
                         </select>
                     </div>
+
+
                     <form class="d-flex search" role="search">
                         <input class=" search-bar" type="search" placeholder="Find Cars,Mobile Phones and more..." aria-label="Search" />
                         <a href="#"> <button class=" search-icon" type="submit"> <i class="fas fa-magnifying-glass"></i></button></a>
-                       <div className="login-sell">
-                        <Link to="./Login"> <button className="btn login" >Login</button></Link>
-                        <Link to="./Signup"><button className="btn sell" ><span><i class="fa-solid fa-plus"></i> </span> Sell</button></Link>
+
+
+                        <div className="login-sell">
+                            <Link to="./Login"> <button className="btn login" >Login</button></Link>
+                            <Link to="./Signup"><button className="btn sell" ><span><i class="fa-solid fa-plus"></i> </span> Sell</button></Link>
                         </div>
                     </form>
                     <hr />
+
                 </div>
             </nav>
-        
+
         </div>
 
     );

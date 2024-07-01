@@ -4,6 +4,7 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Signup from './components/header/Signup';
 import Login from './components/header/Login';
+import ScreenAd from './components/ads/ScreenAd';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
   {
     path: '/Signup',
     element: <Signup />
+  }
+  ,
+  {
+    path: '/ScreenAd',
+    element: <ScreenAd />
   }
 ]);
 

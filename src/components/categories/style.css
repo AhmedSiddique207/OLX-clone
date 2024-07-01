@@ -1,0 +1,27 @@
+.categories-heading {
+    font-weight: 550;
+    font-family: sans-serif;
+    color: #002f34;
+    margin-left: 0.5rem;
+}
+
+.catcard {
+    margin-left: 0.5rem;
+    border: none;
+    /* border-color: red; */
+}
+
+.catimg {
+    width: 5rem;
+    height: 5rem;
+}
+
+.cattitle {
+    text-align: left; /* Ensures text aligns from the start */
+    font-size: 1rem;
+}
+
+.catanchor {
+    text-decoration: none;
+    color: black;
+}

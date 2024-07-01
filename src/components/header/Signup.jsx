@@ -38,7 +38,7 @@ function Signup() {
                         handleChange={handleChange}
                         handleBlur={handleBlur}
                         style={{ marginBottom: errors.username && touched.username ? "5px" : "15px" }}
-                       
+
                     />
                     {errors.username && touched.username ? (
                         <p className="form-error" style={{ margin: "5px 0" }}>{errors.username}</p>
@@ -55,7 +55,7 @@ function Signup() {
                         handleChange={handleChange}
                         handleBlur={handleBlur}
                         style={{ marginBottom: errors.displayname && touched.displayname ? "5px" : "15px" }}
-                       
+
                     />
                     {errors.displayname && touched.displayname ? (
                         <p className="form-error" style={{ margin: "5px 0" }}>{errors.displayname}</p>
@@ -72,7 +72,7 @@ function Signup() {
                         handleChange={handleChange}
                         handleBlur={handleBlur}
                         style={{ marginBottom: errors.password && touched.password ? "5px" : "15px" }}
-                       
+
                     />
                     {errors.password && touched.password ? (
                         <p className="form-error" style={{ margin: "5px 0" }}>{errors.password}</p>
@@ -80,7 +80,7 @@ function Signup() {
                     <br />
 
                     <div>
-                    <Button  title={'Signup'} />
+                        <Button title={'Signup'} />
                         <Link to="../Login" className="loglink">Login</Link>
                     </div>
                 </form>
