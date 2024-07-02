@@ -1,17 +1,13 @@
-import Index from "./components/header/Index";
-import Category from "./components/categories/Category";
-import Ads from "./components/ads/Ads";
-import ScreenAdData from "./components/ads/ScreenAdData"
+import Main from "./Main"
+
 
 
 function App() {
 
   return (
     <div >
-      <Index />
-      <Category />
-      <Ads />
-      <ScreenAdData />
+<Main />
+
     </div>
 
   );
