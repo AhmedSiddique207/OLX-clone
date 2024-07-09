@@ -1,7 +1,8 @@
 
 import Index from "./components/header/Index";
 import Category from "./components/categories/Category";
-import Data from "./components/ads/data"
+import AdsDetails from "./components/ads/AdsDetails";
+
 
 
 
@@ -14,9 +15,9 @@ function Main() {
     <div >
       <Index />
       <Category />
-      <Data />
+      <AdsDetails />
 
-    
+
 
 
     </div>

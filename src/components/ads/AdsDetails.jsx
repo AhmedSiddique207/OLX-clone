@@ -1,51 +1,42 @@
-import React, { useState, useEffect } from "react";
-import "./design.css";
-import { Link } from "react-router-dom";
-import Data from "./data"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { arr } from './data';
+import "./design.css"
 
+const AdsDetails = () => {
 
+    const onClickHandler = () => {
 
+    };
 
-function AdsDetails(props,onClick) {
-const {item}=props
-    // console.log(item.id)
     return (
+        <div>
+            <h3 className="moreAds-heading mt-3">More Ads</h3>
+            <div className='row mt-4'>
 
-
-
-        <div class="card adcard mt-5 "onClick={onclick}>
-
-
-            <Link to={`/DataScreen`} className="adlink">
-
-                <span className="adlink " >
-                    <img className="adimg" src={item?.image}></img>
-                    <div class="card-body">
-
-                        <h5 class="card-title adtitle">{item?.Title}<i class="fa-solid fa-heart icon-heart"></i>
-                        </h5>
-                        <p class="card-text addescription">{item?.Description}</p>
-
-                        <p class="card-text adprice fw-semibold fs-5"> {item?.Price}</p>
-
-
+                {arr.map((item) => (
+                    <div className='col-sm-3'>
+                        <div key={item.id} className="card adcard mt-5" onClick={onClickHandler}>
+                            <Link to={`/ScreenAd/${item.id}`} className='adlink' >
+                                <span className="adlink">
+                                    <img className="adimg" src={item?.image} alt={item?.Title} />
+                                    <div className="card-body">
+                                        <h5 className="card-title adtitle">
+                                            {item?.Title}
+                                            <i className="fa-solid fa-heart icon-heart"></i>
+                                        </h5>
+                                        <p className="card-text addescription">{item?.Description}</p>
+                                        <p className="card-text adprice fw-semibold fs-5">{item?.Price}</p>
+                                    </div>
+                                </span>
+                            </Link>
+                        </div>
                     </div>
-                </span>
-            </Link>
+                ))}
 
+            </div>
         </div>
+    );
+};
 
-
-
-
-
-
-
-
-    )
-}
-export default AdsDetails
-
-
-
-
+export default AdsDetails;
