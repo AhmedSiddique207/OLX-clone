@@ -1,0 +1,74 @@
+.footertop-row {
+    background-color: #f7f8f9;
+}
+
+.footertop-heading {
+    color: #002f34;
+    font-weight: bold;
+    margin-left: 4rem;
+    font-family: 'Times New Roman', ;
+}
+
+.footertop-text {
+    color: #002f34;
+    font-weight: 300;
+    text-align: justify;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+
+.footertop-divider {
+    transform: rotate(90deg);
+    width: 40%;
+    margin-top: 6rem;
+}
+
+.footertop-dividerheading {
+    color: #002f34;
+    margin-left: 8rem;
+    margin-top: -5rem;
+    font-weight: 500;
+}
+
+.footertop-appgooglegallery {
+    margin-left: 7rem;
+    margin-top: 2rem;
+}
+.footermedium-row{
+    margin-left: 5rem;
+}
+.footermedium-main{
+    background-color: #ebeeef;
+    margin-top: -1rem;
+}
+.footermedium-links{
+    text-decoration: none;
+    color: #7a7a7ac7;
+    font-size: small;
+}
+.footermedium-links:hover{
+    text-decoration: none;
+    color: #353434c7;
+    font-size: small;
+}
+.footermedium-icons{
+    color: #7a7a7ac7;
+    text-decoration: none;
+}
+.footermedium-icons:hover{
+    color: #353434c7;
+    text-decoration: none;
+}
+.footermedium-appgooglegallery{
+    margin-top: 2rem;
+    /* margin-left: 5rem; */
+
+}
+.footerbottom-main{
+    background-color:#002f34;
+    color: white;
+    text-align: end;
+    font-family: 'Times New Roman', Times, serif;
+    height: 2rem;
+
+}

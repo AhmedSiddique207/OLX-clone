@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { arr } from './data';
 import Index from "../header/Index";
 import "./design.css";
+import Footer from '../footer/Footer';
 
 const ScreenAd = () => {
     const { id } = useParams();
@@ -64,7 +65,9 @@ const ScreenAd = () => {
             ) : (
                 <p>Sorry, Item not found</p>
             )}
+        <Footer/>
         </div>
+        
     );
 };
 
