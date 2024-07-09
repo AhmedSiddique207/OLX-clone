@@ -1,7 +1,11 @@
+
 import Index from "./components/header/Index";
 import Category from "./components/categories/Category";
-// import AdsDetails from "./components/ads/AdsDetails";
 import Data from "./components/ads/data"
+
+
+
+
 
 
 function Main() {
@@ -10,8 +14,10 @@ function Main() {
     <div >
       <Index />
       <Category />
-      {/* <AdsDetails /> */}
       <Data />
+
+    
+
 
     </div>
 

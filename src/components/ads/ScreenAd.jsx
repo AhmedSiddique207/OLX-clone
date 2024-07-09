@@ -1,6 +1,6 @@
 import React from "react";
 import Index from "../header/Index"
-import Data from "./data"
+import DataScreen from "./DataScreen"
 
 
 import "./design.css";

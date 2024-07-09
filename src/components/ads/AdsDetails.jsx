@@ -6,17 +6,17 @@ import Data from "./data"
 
 
 
-function AdsDetails(props) {
+function AdsDetails(props,onClick) {
 const {item}=props
-    // console.log(title)
+    // console.log(item.id)
     return (
 
 
 
-        <div class="card adcard mt-5">
+        <div class="card adcard mt-5 "onClick={onclick}>
 
 
-            <Link to={"/ScreenAd"} className="adlink">
+            <Link to={`/DataScreen`} className="adlink">
 
                 <span className="adlink " >
                     <img className="adimg" src={item?.image}></img>

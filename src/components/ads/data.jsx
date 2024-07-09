@@ -74,7 +74,7 @@ function Data() {
                             <AdsDetails
                                 key={index}
                                 item={item}
-                            />
+                                />
 
                         </div>
 
@@ -84,16 +84,7 @@ function Data() {
 
 
             </div>
-            {arr.map((item, index) => {
-                return (
-                    <div>
-                        <ScreenAd
-                            key={index}
-                            item={item}
-                        />
-                    </div>
-                )
-            })}
+
 
 
         </div>
