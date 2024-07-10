@@ -58,11 +58,15 @@ color: #002f34;
 
 }
 .seller{
-    margin-left: 62rem;
-    width: 20%;
+    margin-left: 60rem;
+    width: 25%;
+    /* border: 2px solid rgb(8, 207, 221); */
+    margin-top: -1300px;
+    
 }
 .location{
-    width: 18rem;
+    width: 332px;
+    margin-left: 1px;
 }
 .location-heading{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -78,3 +82,22 @@ color: #002f34;
     padding: auto;
     margin-left: 2rem;
 }
+/* .footer-span{
+    margin-bottom: -50rem;
+} */
+ .report{
+    margin-left: 9rem;
+    color: #002f34;
+ }
+ .idd{
+    color: #002f34;
+    margin-left: 3px;
+ }
+ .fa-circle-xmark{
+color: #002f34;
+ }
+ .buttonn{
+    background-color: #002f34;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }

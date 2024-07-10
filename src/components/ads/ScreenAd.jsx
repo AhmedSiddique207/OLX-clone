@@ -4,6 +4,7 @@ import { arr } from './data';
 import Index from "../header/Index";
 import "./design.css";
 import Footer from '../footer/Footer';
+import Button from "./button"
 
 const ScreenAd = () => {
     const { id } = useParams();
@@ -63,12 +64,58 @@ const ScreenAd = () => {
                     </div>
                 </>
             ) : (
-                <p>Sorry, Item not found</p>
+                <i><b><h3>&nbsp;Sorry, Item not found!</h3></b></i>
             )}
-        <Footer/>
+
+
+
+
+            <div className="seller">
+                <div class="card  " >
+
+                    <div class="card-body">
+
+                        <i className="fas fa-user"><span class="card-title fw-light user-detailss " > {item.name} </span></i>
+                        <h6 class="card-subtitle mb-2 text-body-secondary mt-3 ms-4 ">Member since {item.since}</h6>
+                      <center>
+                        <Button title={"Show Phone Number"} />
+                        <br />
+                        <Button title={"Chat"} />
+                        </center>
+                    </div>
+
+
+                </div>
+                <div class="card item-detail-card location" >
+                    <div class="card-body">
+                        <h5 class="card-title location-heading ">Location </h5>
+
+                        <p class="card-text mt-3"><i className="fas fa-location-dot"></i> &nbsp;{item.location}</p>
+                    </div>
+
+
+
+                </div>
+                <span className='idd'>Ad id:{item.id}</span>  
+                   <span className='report'><i class="fa-regular fa-circle-xmark"></i>  Report this Ad</span>
+            </div>
+<div>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+</div>
+<span className='footer-span'>
+<Footer />
+</span>
         </div>
-        
-    );
+    )
 };
+
+
 
 export default ScreenAd;

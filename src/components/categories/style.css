@@ -14,10 +14,12 @@
 .catimg {
     width: 5rem;
     height: 5rem;
+    margin-left: 50px;
 }
 
 .cattitle {
-    text-align: left; /* Ensures text aligns from the start */
+    /* text-align: left; */
+    text-align: center;
     font-size: 1rem;
 }
 
