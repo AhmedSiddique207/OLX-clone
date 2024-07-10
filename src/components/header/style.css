@@ -4,10 +4,8 @@ body {
     overflow-x: hidden;
 }
 
-.olx {
-    font-weight: bolder;
-    font-family: 'Nunito', sans-serif;
-    color: #002f34;
+.olx img {
+ width: 4rem;
     margin-left: 0.5rem;
 }
 
@@ -28,6 +26,7 @@ body {
     padding: auto;
     padding-left: 0.5rem;
     font-family: monospace;
+   text-align: center;
 }
 
 .fa-car:hover,
@@ -75,6 +74,7 @@ body {
     border: 1px solid #ccc;
     border-right: none;
     padding: 0.5rem;
+    /* margin-left: 1rem; */
 }
 
 .search-icon {
@@ -90,7 +90,10 @@ body {
     border: 1px solid #ccc;
     border-left: none;
     padding: 0.5rem;
-    margin-right: 6.5rem;
+    margin-right: 6rem;
+}
+.search-mag{
+    text-decoration: none;
 }
 
 .login-sell {

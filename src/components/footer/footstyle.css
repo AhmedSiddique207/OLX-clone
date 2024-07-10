@@ -6,7 +6,7 @@
     color: #002f34;
     font-weight: bold;
     margin-left: 4rem;
-    font-family: 'Times New Roman', ;
+    font-family: 'Times New Roman serif', ;
 }
 
 .footertop-text {
@@ -25,50 +25,61 @@
 
 .footertop-dividerheading {
     color: #002f34;
-    margin-left: 8rem;
-    margin-top: -5rem;
-    font-weight: 500;
+    margin-left: 7rem;
+    margin-top: -4rem;
+    font-weight: 700;
+    font-size: small;
 }
 
 .footertop-appgooglegallery {
     margin-left: 7rem;
     margin-top: 2rem;
 }
-.footermedium-row{
-    margin-left: 5rem;
-}
-.footermedium-main{
-    background-color: #ebeeef;
-    margin-top: -1rem;
-}
-.footermedium-links{
-    text-decoration: none;
-    color: #7a7a7ac7;
-    font-size: small;
-}
-.footermedium-links:hover{
-    text-decoration: none;
-    color: #353434c7;
-    font-size: small;
-}
-.footermedium-icons{
-    color: #7a7a7ac7;
-    text-decoration: none;
-}
-.footermedium-icons:hover{
-    color: #353434c7;
-    text-decoration: none;
-}
-.footermedium-appgooglegallery{
-    margin-top: 2rem;
-    /* margin-left: 5rem; */
 
+.footermedium-row {
+    margin-left: 5rem;
+    /* display: inline-block; */
 }
-.footerbottom-main{
-    background-color:#002f34;
+
+.footermedium-main {
+    background-color: #ebeeef;
+    margin-top: -14px;
+}
+
+.footermedium-links {
+    text-decoration: none;
+    color: #7a7a7ac7;
+    font-size: small;
+}
+
+.footermedium-links:hover {
+    text-decoration: none;
+    color: #353434c7;
+    font-size: small;
+}
+
+.footermedium-icons {
+    color: #7a7a7ac7;
+    text-decoration: none;
+}
+
+.footermedium-icons:hover {
+    color: #353434c7;
+    text-decoration: none;
+}
+
+.footermedium-appgooglegallery {
+    margin-top: 2rem;
+}
+
+.appgooglegallery {
+    text-decoration: none;
+}
+
+.footerbottom-main {
+    background-color: #002f34;
     color: white;
     text-align: end;
     font-family: 'Times New Roman', Times, serif;
     height: 2rem;
-
 }

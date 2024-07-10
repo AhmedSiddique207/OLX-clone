@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "./images/OLX-logo.png"
 import "./style.css"
 
 
@@ -10,14 +11,14 @@ function Index() {
         <div>
             <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
-                    <a class="navbar-brand olx me-5 pe-5" href="https://olx.com.pk" target="_blank">  <h1 className="olx"><span>OLX</span></h1></a>
+                    <a class="navbar-brand olx me-5 pe-5" href="https://olx.com.pk" target="_blank">  <span className="olx"><img src={logo} /></span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link  me-5 pe-5" href="#">   <i className="fas fa-car "><span className="icon-text">Motors</span></i></a>
+                                <a class="nav-link  me-5 pe-5" href="#">   <i className="fas fa-car "><span className="icon-text ">Motors</span></i></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link me-5 pe-5" href="#"><i className="fas fa-building"><span className="icon-text property">Property</span></i></a>
@@ -34,7 +35,7 @@ function Index() {
 
                     <div class="select-container">
                         <i class="fas fa-location-dot"></i>
-                        <select name="options" id="options" class="fw-bold ">
+                        <select name="options" id="options" class="fw-semibold ">
                             <option value="option1 " >Select Location</option>
                             <option value="option2">Sindh</option>
                             <option value="option3">Punjab</option>
@@ -47,11 +48,11 @@ function Index() {
 
                     <form class="d-flex search" role="search">
                         <input class=" search-bar" type="search" placeholder="Find Cars,Mobile Phones and more..." aria-label="Search" />
-                        <a href="#"> <button class=" search-icon" type="submit"> <i class="fas fa-magnifying-glass"></i></button></a>
+                        <a href="#" className="search-mag"> <button class=" search-icon" type="submit"> <i class="fas fa-magnifying-glass"></i></button></a>
 
 
                         <div className="login-sell">
-                            <Link to="./Login"> <button className="btn login" >Login</button></Link>
+                            <Link to="./Login"> <button className="btn login fw-bold" >Login</button></Link>
                             <Link to="./Signup"><button className="btn sell" ><span><i class="fa-solid fa-plus"></i> </span> Sell</button></Link>
                         </div>
                     </form>
