@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Signup from './components/header/Signup';
-import Login from './components/header/Login';
 import ScreenAd from './components/ads/ScreenAd';
 import Adscreeninfo from "./components/category screen/adscreeninfo"
 import Adscreen from "./components/category screen/adscreen"
+import LoginSignupModal from './components/header/LoginSignupModal';
 
 const router = createBrowserRouter([
   {
@@ -14,13 +13,9 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: '/Login',
-    element: <Login />
+    path: '/LoginSignupModal',
+    element: <LoginSignupModal />
   },
-  {
-    path: '/Signup',
-    element: <Signup />
-  }
   ,
   {
     path: '/ScreenAd/:id',

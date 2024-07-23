@@ -1,12 +1,27 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import logo from "./images/OLX-logo.png"
 import "./style.css"
 import Nav from "../navbar/nav"
+import LoginSignupModal from "./LoginSignupModal";
 
 
 function Index() {
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLogin, setIsLogin] = useState(true);
+  
+    const openModal = (isLogin) => {
+      setIsLogin(isLogin);
+      setIsModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setIsModalOpen(false);
+    };
+  
+    const toggleMode = () => {
+      setIsLogin(!isLogin);
+    };
     return (
 
         <div className="main-position">
@@ -54,8 +69,14 @@ function Index() {
 
 
                         <div className="login-sell">
-                            <Link to="./Login" className="login-width"> <button className="btn login fw-bold" >Login</button></Link>
-                            <Link to="./Signup" className="signup-width"><button className="btn sell" ><span><i class="fa-solid fa-plus"></i> </span> Sell</button></Link>
+                          
+      <button type="button" className="btn  login-width btn login fw-bold" onClick={() => openModal(true)}>Login</button>
+      <button type="button" className="btn  signup-width btn sell" onClick={() => openModal(false)}><span><i class="fa-solid fa-plus"></i></span>Sell</button>
+      {isModalOpen && (
+        <LoginSignupModal isLogin={isLogin} closeModal={closeModal} toggleMode={toggleMode} />
+      )}
+                       
+                       
                         </div>
                     </form>
                     <hr />
