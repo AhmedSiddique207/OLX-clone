@@ -1,0 +1,25 @@
+.nav-cat {
+    margin-top: -2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.navi {
+    text-decoration: none;
+
+
+}
+
+.navi:hover {
+    color: #3a77ff;
+    text-decoration: none;
+
+}
+
+.dropdown-menu {
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+
+}

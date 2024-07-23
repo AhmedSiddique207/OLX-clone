@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { arr } from './data';
 import Index from "../header/Index";
 import "./design.css";
@@ -75,12 +75,12 @@ const ScreenAd = () => {
 
                     <div class="card-body">
 
-                        <i className="fas fa-user"><span class="card-title fw-light user-detailss " > {item.name} </span></i>
+                        <i className="fas fa-user"><span class="card-title fw-light user-detailss " > {item.username} </span></i>
                         <h6 class="card-subtitle mb-2 text-body-secondary mt-3 ms-4 ">Member since {item.since}</h6>
-                      <center>
-                        <Button title={"Show Phone Number"} />
-                        <br />
-                        <Button title={"Chat"} />
+                        <center>
+                            <Button title={"Show Phone Number"} />
+                            <br />
+                            <Button title={"Chat"} />
                         </center>
                     </div>
 
@@ -96,22 +96,22 @@ const ScreenAd = () => {
 
 
                 </div>
-                <span className='idd'>Ad id:{item.id}</span>  
-                   <span className='report'><i class="fa-regular fa-circle-xmark"></i>  Report this Ad</span>
+                <span className='idd'>Ad id:{item.id}</span>
+                <span className='report'><i class="fa-regular fa-circle-xmark"></i>  Report this Ad</span>
             </div>
-<div>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
-</div>
-<span className='footer-span'>
-<Footer />
-</span>
+            <div>
+                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br />
+            </div>
+            <span className='footer-span'>
+                <Footer />
+            </span>
         </div>
     )
 };

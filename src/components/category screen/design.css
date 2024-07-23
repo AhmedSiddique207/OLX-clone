@@ -1,0 +1,109 @@
+.moreAds-heading{
+    font-weight: 550;
+    font-family:  sans-serif;
+    color: #002f34;
+    margin-left: 0.5rem;
+}
+.adcard{
+    margin-left: 0.5rem;
+    padding: auto;
+    width: 100%;
+    
+}
+.adimg{
+    
+    width: 100%;
+    height: 15rem;
+
+}
+.adlink{
+    text-decoration: none;
+    color: #002f34;
+}
+.icon-heart{
+/* margin-left: 17rem; */
+/* margin-top: -20rem; */
+color: #002f34;
+
+}
+.item-pic{
+    height: 35rem;
+    border-radius: 5px ;
+    width: 60%;
+    padding: auto;
+    margin: auto;
+    margin-left: 2rem;
+ 
+
+}
+.item-detail-card{
+    border-radius: 5px ;
+    width: 60%;
+    padding: auto;
+    margin: auto;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    
+    
+
+}
+.item-detail-card-description{
+    border-radius: 5px ;
+    font-size: 14px;    
+    width: 60%;
+    padding: auto;
+    margin: auto;
+    margin-left: 2rem;
+    margin-top: 1rem;
+
+}
+.seller{
+    margin-left: 60rem;
+    width: 25%;
+    /* border: 2px solid rgb(8, 207, 221); */
+    margin-top: -1300px;
+    
+}
+.location{
+    width: 332px;
+    margin-left: 1px;
+}
+.location-heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 1rem; 
+  
+}
+.user-detailss{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 1rem; 
+    margin: auto;
+    padding: auto;
+    margin-left: 2rem;
+}
+/* .footer-span{
+    margin-bottom: -50rem;
+} */
+ .report{
+    margin-left: 9rem;
+    color: #002f34;
+ }
+ .idd{
+    color: #002f34;
+    margin-left: 3px;
+ }
+ .fa-circle-xmark{
+color: #002f34;
+ }
+ .buttonn{
+    background-color: #002f34;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ .buttonn:hover{
+    background-color: #002f34;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }  
+ 

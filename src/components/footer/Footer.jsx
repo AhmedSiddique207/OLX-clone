@@ -70,12 +70,12 @@ function Footermedium() {
                 <div className="row footermedium-row">
                
                     {arr.slice(3).map((item, index) => (
-                        <div key={index} className="col-sm-3">
+                        <div key={index} className="col-sm-3 footermedium-height-adjust">
                             <h6 className="footermedium-headings fw-bold">{item.heading}</h6>
-                            <a href="/" target="_blank" className="footermedium-links"><p>{item.one}</p></a>
-                            <a href="/" target="_blank" className="footermedium-links"><p>{item.two}</p></a>
-                            <a href="/" target="_blank" className="footermedium-links"><p>{item.three}</p></a>
-                            <a href="/" target="_blank" className="footermedium-links"><p>{item.four}</p></a>
+                            <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links "><p>{item.one}</p></a>
+                            <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links"><p>{item.two}</p></a>
+                            <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links"><p>{item.three}</p></a>
+                            <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links"><p>{item.four}</p></a>
                         </div>
                     ))}
                     

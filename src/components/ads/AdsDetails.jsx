@@ -10,28 +10,34 @@ const AdsDetails = () => {
     };
 
     return (
-        <div>
-            <h3 className="moreAds-heading mt-3">More Ads</h3>
-            <div className='row mt-4'>
+        <div className="ms-5">
+            <h3 className="moreAds-heading mt-5 ">More Ads</h3>
+            <div className='row '>
 
                 {arr.map((item) => (
-                    <div className='col-sm-3'>
-                        <div key={item.id} className="card adcard mt-5" onClick={onClickHandler}>
+                    <>
+                       
+                    <div className='col-sm-3 '>
+                        <div key={item.id} className="card adddcard  mt-5" onClick={onClickHandler}>
                             <Link to={`/ScreenAd/${item.id}`} className='adlink' >
                                 <span className="adlink">
-                                    <img className="adimg" src={item?.image} alt={item?.Title} />
+                                    <img className="adddimg" src={item?.image} alt={item?.Title} />
                                     <div className="card-body">
-                                        <h5 className="card-title adtitle">
-                                            {item?.Title}
-                                            <i className="fa-solid fa-heart icon-heart"></i>
-                                        </h5>
-                                        <p className="card-text addescription">{item?.Description}</p>
+                                        <div className="row ">
                                         <p className="card-text adprice fw-semibold fs-5">{item?.Price}</p>
+                                        <i className='fas fa-heart icon-heart '></i>
+                                        </div>
+                                        <p className="card-title fs-5">
+                                            {item?.Title}
+                                            
+                                        </p>
+                                        <p className="card-text addescription fw-lighter">{item?.location}</p>
                                     </div>
                                 </span>
                             </Link>
                         </div>
                     </div>
+                    </>
                 ))}
 
             </div>

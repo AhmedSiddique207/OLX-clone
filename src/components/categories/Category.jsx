@@ -19,53 +19,29 @@ import kids from "./images/Kids.png"
 
 
 
-function Category() {
-    let arr = [
-        { Title: "Mobiles", image: mobiles,link:"#" },
-        { Title: "Vehicles", image: vehicles, link:"#" },
-        { Title: "Property For Sale", image: propertySale , link:"#" },
-        { Title: "Property For Rent", image: propertyRent , link:"#" },
-        { Title: "Electronics & Home Appliances", image: electronic , link:"#"},
-        { Title: "Bikes", image: bikes , link:"#"},
-        { Title: "Business Industrial & Agriculture", image: agriculture , link:"#" },
-        { Title: "Services", image: services , link:"#"},
-        { Title: "Jobs", image: jobs , link:"#"},
-        { Title: "Animals", image: animals , link:"#"},
-        { Title: "Furniture & Home Decor", image: Furniture , link:"#"},
-        { Title: "Fashion & Beauty", image: fashion , link:"#"},
-        { Title: "Books, Sports & Hobbies", image: books , link:"#"},
-        { Title: "Kids", image: kids , link:"#"},
-     ]
+
+export let Category = [
+    { type: "mobile", Title: "Mobiles ", image: mobiles,  },
+    { type: "vehicles", Title: " Vehicles", image: vehicles,  },
+    { type: "sale", Title: "Property For Sale", image: propertySale,  },
+    { type: "rent", Title: "Property For Rent", image: propertyRent, link: "#" },
+    { type: "electronics", Title: "Electronics & Home Appliances", image: electronic,  },
+    { type: "bikes", Title: "Bikes", image: bikes,  },
+    { type: "business", Title: "Business Industrial & Agriculture", image: agriculture,  },
+    { type: "services", Title: "Services", image: services,  },
+    { type: "jobs", Title: "Jobs", image: jobs,  },
+    { type: "animals", Title: "Animals", image: animals,  },
+    { type: "furniture", Title: "Furniture & Home Decor", image: Furniture,  },
+    { type: "fashion", Title: "Fashion & Beauty", image: fashion,  },
+    { type: "books", Title: "Books, Sports & Hobbies", image: books,  },
+    { type: "kids", Title: "Kids", image: kids,  },
+]
 
 
 
-    return (
-
-        <div>
-
-            <h3 className="categories-heading">All Categories</h3>
-
-            <div className='row mt-4'>
-
-                {arr.map((item, index) => {
-                    return (
-                        <div className='col-sm-2'>
-                       <Details title={item.Title} image={item.image} link={item.link} />
-                        </div>
-
-                    )
-                })}
-
-
-            </div>
 
 
 
-        </div>
-    )
 
 
-}
 
-
-export default Category;

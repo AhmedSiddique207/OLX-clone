@@ -2,7 +2,7 @@
     font-weight: 550;
     font-family: sans-serif;
     color: #002f34;
-    margin-left: 0.5rem;
+    margin-left: 3rem;
 }
 
 .catcard {
@@ -27,3 +27,47 @@
     text-decoration: none;
     color: black;
 }
+.adcard-border{
+    border: none;
+}
+/* .main-position{
+    border: 2px solid red;
+    position: sticky;
+} */
+
+.categories-heading {
+    margin-bottom: 1rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    margin: 0 3rem;
+}
+
+.category-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catimg {
+    width: 90px; 
+    height: 90px; 
+    margin: 0 auto;
+}
+
+.card-title {
+    text-align: start;
+    margin-top: 0.5rem;
+    font-size: 1rem; 
+    /* border: 2px solid red; */
+    /* font-weight:; */
+}
+
+.category-item:nth-child(n+10) {
+    grid-column: span 1 / auto;
+}
+

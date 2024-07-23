@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "./images/OLX-logo.png"
 import "./style.css"
+import Nav from "../navbar/nav"
 
 
 function Index() {
 
     return (
 
-        <div>
+        <div className="main-position">
             <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
                     <a class="navbar-brand olx me-5 pe-5" href="https://olx.com.pk" target="_blank">  <span className="olx"><img src={logo} /></span></a>
@@ -18,10 +19,10 @@ function Index() {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link  me-5 pe-5" href="#">   <i className="fas fa-car "><span className="icon-text ">Motors</span></i></a>
+                                <a class="nav-link nav-link-motor me-5 pe-5" href="../adscreen/vehicles">   <i className="fas fa-car "><span className="icon-text ">Motors</span></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link me-5 pe-5" href="#"><i className="fas fa-building"><span className="icon-text property">Property</span></i></a>
+                                <a class="nav-link nav-link-property me-5 pe-5" href="../adscreen/sale "><i className="fas fa-building"><span className="icon-text property">Property</span></i></a>
                             </li>
 
                         </ul>
@@ -30,19 +31,20 @@ function Index() {
             </nav>
 
 
-            <nav class="navbar secondary-tab">
+            <nav class="navbar secondary-tab ">
                 <div class="container-fluid ">
 
                     <div class="select-container">
                         <i class="fas fa-location-dot"></i>
-                        <select name="options" id="options" class="fw-semibold ">
-                            <option value="option1 " >Select Location</option>
+                        <select name="options" id="options" class="fw-semibold  ">
+                            <option value="option1">Select Location</option>
                             <option value="option2">Sindh</option>
                             <option value="option3">Punjab</option>
                             <option value="option4">Khyber Pakhtunkhwa</option>
                             <option value="option5">Balochistan</option>
                             <option value="option6">Gilgit Baltistan</option>
                         </select>
+                        <i class="fa-solid fa-caret-down"></i>
                     </div>
 
 
@@ -52,15 +54,18 @@ function Index() {
 
 
                         <div className="login-sell">
-                            <Link to="./Login"> <button className="btn login fw-bold" >Login</button></Link>
-                            <Link to="./Signup"><button className="btn sell" ><span><i class="fa-solid fa-plus"></i> </span> Sell</button></Link>
+                            <Link to="./Login" className="login-width"> <button className="btn login fw-bold" >Login</button></Link>
+                            <Link to="./Signup" className="signup-width"><button className="btn sell" ><span><i class="fa-solid fa-plus"></i> </span> Sell</button></Link>
                         </div>
                     </form>
                     <hr />
 
+
                 </div>
             </nav>
-
+            <div className="ms-1 mt-2">
+                <Nav />
+            </div>
         </div>
 
     );

@@ -50,6 +50,7 @@
     text-decoration: none;
     color: #7a7a7ac7;
     font-size: small;
+      
 }
 
 .footermedium-links:hover {
@@ -82,4 +83,10 @@
     text-align: end;
     font-family: 'Times New Roman', Times, serif;
     height: 2rem;
+    padding-right: 1rem;
+    
+}
+
+.footermedium-height-adjust{
+    height: 12rem;
 }
