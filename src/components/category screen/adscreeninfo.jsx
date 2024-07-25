@@ -1,12 +1,31 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { mobile,vehicles,sale,rent,electronics,bikes,business,services,jobs,animals,furniture,fashion,books,kids } from './data';
 import "./design.css";
 import Index from "../header/Index"
 import Footer from "../footer/Footer"
-import Button from "../ads/button";
+import Button from "../Button/button";
+import LoginSignupModal from "../header/LoginSignupModal";
 
 const Adscreeninfo = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLogin, setIsLogin] = useState(true);
+
+
+    const openModal = (isLogin) => {
+        setIsLogin(isLogin);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const toggleMode = () => {
+        setIsLogin(!isLogin);
+    };
+
     const { id } = useParams();
 
     const allData = [
@@ -24,7 +43,7 @@ const Adscreeninfo = () => {
         ...fashion,
         ...books,
         ...kids,
-        
+
     ];
     const filteredItems = allData;
 
@@ -35,8 +54,9 @@ const Adscreeninfo = () => {
     return (
         <div>
            <Index />
+           <div className="main-adscreen">
             {item ? (
-                <>
+           <div className="item-adscreen">
                     <img src={item.image} className="item-pic" alt={item.Title} />
 
                     <div className="card item-detail-card">
@@ -72,7 +92,7 @@ const Adscreeninfo = () => {
                             <p className="card-text">Only cash no exchange</p>
                         </div>
                     </div>
-                </>
+                </div>
             ) : (
                 <i><b><h3>&nbsp;Sorry, Item not found!</h3></b></i>
             )}
@@ -80,25 +100,49 @@ const Adscreeninfo = () => {
             {item && (
                 <div className="seller">
                     <div className="card">
+                    <h5 className='fw-semibold mt-3 ms-3 fs-4 listed'>Listed By Private User</h5>
                         <div className="card-body">
+
                             <i className="fas fa-user">
                                 <span className="card-title fw-light user-detailss">{item.name}</span>
                             </i>
-                            <h6 className="card-subtitle mb-2 text-body-secondary mt-3 ms-4">Member since {item.since}</h6>
-                            <center>
-                                <Button title={"Show Phone Number"} />
+                            <h6 className="card-subtitle mb-2 text-body-secondary  ms-5 mt-1">Member since {item.since}</h6>
+                           
                                 <br />
-                                <Button title={"Chat"} />
-                            </center>
+{/* real buttons start */}
+
+
+                                <Button title={"Show Phone Number"} backgroundColor="#002f34"
+                                    fontColor="#FFFFFF" icon="fa-solid fa-phone"   onClick={() => openModal(true)}/>
+
+                                <Button title={"Chat"} backgroundColor="#FFFFFF" fontColor="#002f34" icon="fa-regular fa-comment"  onClick={() => openModal(false)}/>
+                        
+                         
+{/* real button end */}
+
+
+                             
+                                {isModalOpen && (
+                                    <LoginSignupModal
+                                        isLogin={isLogin}
+                                        closeModal={closeModal}
+                                        toggleMode={toggleMode}
+                                    />
+                                )}
+
+
+
+                           
+                        
                         </div>
                     </div>
 
                     <div className="card item-detail-card location">
                         <div className="card-body">
-                            <h5 className="card-title location-heading">Location</h5>
-                            <p className="card-text mt-3">
+                            <h5 className="card-title location-heading fs-4">Location</h5>
+                            <h6 className="card-text mt-3">
                                 <i className="fas fa-location-dot"></i> &nbsp;{item.location}
-                            </p>
+                            </h6>
                         </div>
                     </div>
                     <span className='idd'>Ad id: {item.id}</span>
@@ -108,17 +152,15 @@ const Adscreeninfo = () => {
                 </div>
             )}
 
-            <div>
-                <br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br />
-            </div>
 
+
+
+
+
+                            
+
+
+            </div>
             <span className='footer-span'>
              <Footer/>
             </span>

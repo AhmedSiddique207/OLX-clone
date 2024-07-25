@@ -33,16 +33,17 @@ width: 15%;
 .item-pic{
     height: 35rem;
     border-radius: 5px ;
-    width: 60%;
+    width: 95%;
     padding: auto;
     margin: auto;
     margin-left: 2rem;
+    /* border: 2px solid purple; */
  
 
 }
 .item-detail-card{
     border-radius: 5px ;
-    width: 60%;
+    width: 95%;
     padding: auto;
     margin: auto;
     margin-left: 2rem;
@@ -54,28 +55,45 @@ width: 15%;
 .item-detail-card-description{
     border-radius: 5px ;
     font-size: 14px;    
-    width: 60%;
+    width: 95%;
     padding: auto;
     margin: auto;
     margin-left: 2rem;
     margin-top: 1rem;
 
 }
+.main-adscreen{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+.item-adscreen{
+    width: 70%;
+    /* border: 2px solid red; */
+}
 .seller{
-    margin-left: 60rem;
-    width: 25%;
+    /* margin-left: 60rem; */
+    width: 30%;
+    /* justify-content:end ; */
+    /* align-items: end; */
+    /* align-self: self-end; */
+    /* align-content:end; */
     /* border: 2px solid rgb(8, 207, 221); */
-    margin-top: -1300px;
+    /* margin-top: -1300px; */
     
 }
+.listed{
+    color: #002f34;
+}
 .location{
-    width: 332px;
+   width: 404px;
     margin-left: 1px;
 }
 .location-heading{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: lighter;
-    font-size: 1rem; 
+    /* font-size: 4rem;  */
   
 }
 .user-detailss{
