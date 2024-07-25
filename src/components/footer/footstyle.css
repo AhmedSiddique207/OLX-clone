@@ -43,31 +43,32 @@
 
 .footermedium-main {
     background-color: #ebeeef;
-    margin-top: -14px;
+    margin-top: -15px;
 }
 
 .footermedium-links {
     text-decoration: none;
     color: #7a7a7ac7;
-    font-size: small;
+    font-size: 12px;
+    
       
 }
 
 .footermedium-links:hover {
     text-decoration: none;
     color: #353434c7;
-    font-size: small;
+    font-size: 12px;
 }
 
 .footermedium-icons {
-    color: #7a7a7ac7;
-    text-decoration: none;
-}
-
-.footermedium-icons:hover {
     color: #353434c7;
     text-decoration: none;
 }
+
+/* .footermedium-icons:hover {
+    color: #353434c7;
+    text-decoration: none;
+} */
 
 .footermedium-appgooglegallery {
     margin-top: 2rem;
@@ -85,8 +86,12 @@
     height: 2rem;
     padding-right: 1rem;
     
+    
+}
+.footerbottom-main h6{
+    font-size: 15px;
+}
+.footermedium-height-adjust{
+    height: 13rem;
 }
 
-.footermedium-height-adjust{
-    height: 12rem;
-}

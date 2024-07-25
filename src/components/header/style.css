@@ -5,18 +5,22 @@ body {
 }
 
 .olx img {
-    width: 4rem;
+    width: 3.5rem;
     margin-left: 2rem;
 }
 
-.fa-car {
-    color: #002f34;
-    font-size: 2rem;
-}
 
-.nav-item .nav-link-property {
+
+.nav-itemm .nav-link-property {
     width: 10%;
     /* border: 2px solid red */
+}
+.nav-itemm{
+    display: flex;
+   
+}
+.icon-text{
+    vertical-align: middle;
 }
 
 .nav-link.active {
@@ -26,11 +30,16 @@ body {
 .nav-link.active .fas {
     color: #3a77ff;
 }
-
+.fa-car {
+    color: #002f34;
+    font-size: 2rem;
+    margin-left: -2rem;
+    /* border: 2px solid red; */
+}
 .fa-building {
     color: #002f34;
     font-size: 2rem;
-    margin-right: 70rem;
+    margin-left: -3rem;
     /* width: 10%; */
     /* border: 2px solid red; */
 }
@@ -353,7 +362,7 @@ body {
     width: 100%;
     z-index: 1000;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .main-content {

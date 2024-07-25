@@ -30,7 +30,7 @@ function Footertop() {
                 </div>
                 <div className="col-sm-4" >
                     <h2 className="footertop-heading mt-1">TRY THE OLX APP</h2>
-                    <h4 className="footertop-text">Buy, sell and find just about anything using the app on your mobile.</h4>
+                    <h4 className="footertop-text fw-semibold fs-5 ">Buy, sell and find just about anything using the app on your mobile.</h4>
                 </div>
                 <div className="col-sm-4" >
                     <hr className="footertop-divider" />
@@ -72,7 +72,7 @@ function Footermedium() {
                     {arr.slice(3).map((item, index) => (
                         <div key={index} className="col-sm-3 footermedium-height-adjust">
                             <h6 className="footermedium-headings fw-bold">{item.heading}</h6>
-                            <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links "><p>{item.one}</p></a>
+                            <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links  "><p>{item.one}</p></a>
                             <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links"><p>{item.two}</p></a>
                             <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links"><p>{item.three}</p></a>
                             <a href="https://www.olx.com.pk" target="_blank" className="footermedium-links"><p>{item.four}</p></a>
@@ -104,7 +104,7 @@ function Footermedium() {
 function Footerbottom() {
     return (
         <div className="footerbottom-main">
-            <h6 className="pt-2">Free Classifieds in Pakistan . © 2006-2024 OLX</h6>
+            <h6 className="pt-2 ">Free Classifieds in Pakistan . © 2006-2024 OLX</h6>
         </div>
     )
 }

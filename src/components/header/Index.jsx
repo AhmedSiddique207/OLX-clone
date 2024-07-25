@@ -29,7 +29,7 @@ function Index() {
 
     return (
         <>
-            {/* Fixed upper part */}
+            
             <div className="fixed-upper">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
@@ -56,7 +56,7 @@ function Index() {
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
 
-                                <li className="nav-item">
+                                <li className="nav-itemm">
                                     <Link
                                         className={`nav-link nav-link-motor me-5 pe-5 ${isActive("/adscreen/vehicles") ? "active" : ""}`}
                                         to="/adscreen/vehicles"
@@ -66,7 +66,7 @@ function Index() {
                                         </i>
                                     </Link>
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-itemm">
                                     <Link
                                         className={`nav-link nav-link-property me-5 pe-5 ${isActive("/adscreen/sale") ? "active" : ""}`}
                                         to="/adscreen/sale"
