@@ -6,6 +6,7 @@ import Index from "../header/Index"
 import Footer from "../footer/Footer"
 import Button from "../Button/button";
 import LoginSignupModal from "../header/LoginSignupModal";
+import user from "./extra images/usericonpic.png"
 
 const Adscreeninfo = () => {
 
@@ -103,12 +104,12 @@ const Adscreeninfo = () => {
                     <h5 className='fw-semibold mt-3 ms-3 fs-4 listed'>Listed By Private User</h5>
                         <div className="card-body">
 
-                            <i className="fas fa-user">
-                                <span className="card-title fw-light user-detailss">{item.name}</span>
-                            </i>
-                            <h6 className="card-subtitle mb-2 text-body-secondary  ms-5 mt-1">Member since {item.since}</h6>
+                        <img src={user} className='img-user' />
+                        <span class="card-title fw-light user-detailsss " > {item.name} </span>
+                        <h6 class="card-subtitle  text-body-secondary   since  ">Member since {item.since}</h6>
+                        <span className='see-more-arrow'><p className='see-more'>see more</p><i class="fa-solid fa-arrow-right"></i></span>
                            
-                                <br />
+                            
 {/* real buttons start */}
 
 

@@ -5,7 +5,7 @@ body {
 }
 
 .olx img {
-    width: 3.5rem;
+    width: 4rem;
     margin-left: 2rem;
 }
 
@@ -15,11 +15,13 @@ body {
     width: 10%;
     /* border: 2px solid red */
 }
-.nav-itemm{
+
+.nav-itemm {
     display: flex;
-   
+
 }
-.icon-text{
+
+.icon-text {
     vertical-align: middle;
 }
 
@@ -27,35 +29,69 @@ body {
     color: #3a77ff;
 }
 
+.nav-link-motor.active .heading-bg,
+.nav-link-property.active .heading-bg {
+    color: #3a77ff;
+}
+
 .nav-link.active .fas {
     color: #3a77ff;
 }
+
 .fa-car {
-    color: #002f34;
+
     font-size: 2rem;
     margin-left: -2rem;
-    /* border: 2px solid red; */
+    width: 3rem;
+    height: 3rem;
+
+
 }
+
 .fa-building {
-    color: #002f34;
     font-size: 2rem;
-    margin-left: -3rem;
+    margin-left: -24px;
+    width: 3rem;
+    height: 3rem;
     /* width: 10%; */
     /* border: 2px solid red; */
+}
+
+.hover-building,
+.hover-car {
+    color: #002f34;
 }
 
 .icon-text {
     font-size: 1rem;
     margin: auto;
     padding: auto;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     font-family: monospace;
     text-align: center;
 }
 
-.fa-car:hover,
-.fa-building:hover {
+.hover-car:hover,
+.hover-building:hover {
     color: #3a77ff;
+
+}
+
+/* .nav-itemm-mot{
+    background-color: purple;
+   border: 2px solid rgb(56, 250, 18);
+}
+.nav-itemm-build
+{
+    border: 2px solid blue;
+    background-color: purple;
+    
+} */
+.fa-building,
+.fa-car {
+    border-radius: 100px;
+    width: 3rem;
+
 }
 
 .select-container {
@@ -215,7 +251,7 @@ body {
 }
 
 
-/* login signup styling */
+
 .modal-backdrop {
     position: fixed;
     top: 0;
@@ -267,6 +303,7 @@ body {
 
 .social-button {
     width: 100%;
+    height: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 2px solid #002f34;
@@ -276,19 +313,22 @@ body {
     justify-content: center;
     cursor: pointer;
     font-size: 1rem;
+
 }
 
 .social-button:hover {
     width: 100%;
+    height: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 4px solid #002f34;
+    border: 3px solid #002f34;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: 1rem;
+
 }
 
 .social-button img {
@@ -334,6 +374,9 @@ body {
 
 .privacy {
     text-decoration: underline;
+    cursor: pointer;
+    /* text-decoration: none; */
+    color: black;
 }
 
 .terms-container {
@@ -346,7 +389,7 @@ body {
     margin-left: -11rem;
     margin-bottom: -2rem;
     transform: scale(1.3);
-  
+
 }
 
 .terms-label {
@@ -373,5 +416,13 @@ body {
 
 .hr-index {
     width: 100%;
+
+}
+
+.heading-bg {
+    /* vertical-align: top; */
+    margin-top: -37px;
+    padding-left: 2rem;
+    font-weight: bold;
 
 }

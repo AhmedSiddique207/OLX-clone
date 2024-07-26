@@ -6,6 +6,7 @@ import "./design.css";
 import Footer from '../footer/Footer';
 import Button from "../Button/button"
 import LoginSignupModal from '../header/LoginSignupModal';
+import user from "./images/usericonpic.png"
 
 const ScreenAd = () => {
 
@@ -95,10 +96,11 @@ const ScreenAd = () => {
 
                         <h5 className='fw-semibold mt-3 ms-3 fs-4 listed'>Listed By Private User</h5>
                         <div class="card-body">
-                            <i className="fas fa-user"><span class="card-title fw-light user-detailss " > {item.username} </span></i>
-                            <h6 class="card-subtitle mb-2 text-body-secondary  ms-5 mt-1 ">Member since {item.since}</h6>
+                            <img src={user} className='img-user' /><span class="card-title fw-light user-detailsss " > {item.username} </span>
+                          
                     
-                    <br/>
+                            <h6 class="card-subtitle  text-body-secondary   since  ">Member since {item.since}</h6>
+                            <span className='see-more-arrow'><p className='see-more'>see more</p><i class="fa-solid fa-arrow-right"></i></span>
                      {/* real buttons start */}
 
 

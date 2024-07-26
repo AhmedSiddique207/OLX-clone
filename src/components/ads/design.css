@@ -96,14 +96,6 @@ width: 15%;
     /* font-size: 4rem;  */
   
 }
-.user-detailss{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: lighter;
-    font-size: 1rem; 
-    margin: auto;
-    padding: auto;
-    margin-left: 2rem;
-}
 /* .footer-span{
     margin-bottom: -50rem;
 } */
@@ -128,4 +120,40 @@ color: #002f34;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }  
+ .img-user{
+    width: 5rem;
+   height: 5rem;
+}
+.user-detailsss{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 1rem; 
+    margin-left: 2rem;
+    vertical-align: top;
+    /* border: 2px solid red; */
+} 
+
+ .since{
+    margin-left: 7rem;
+    margin-top: -3rem;
+ }
+ .img-user{
+    width: 5rem;
+   height: 5rem;
+}
+.see-more{
+    font-weight: 700;
+    color: #002f34;
+    margin-left: 7rem;
+    margin-top: 5px;
+ }
+ .fa-arrow-right{
+    margin-left: 12rem;
+    vertical-align: top;
+    margin-top: -34px;
+    color: #002f34;
+ }
+ .see-more-arrow{
+    cursor: pointer;
+ }
  

@@ -29,7 +29,7 @@ function Index() {
 
     return (
         <>
-            
+
             <div className="fixed-upper">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
@@ -56,25 +56,30 @@ function Index() {
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
 
-                                <li className="nav-itemm">
+                                <li className="nav-itemm nav-itemm-mot">
                                     <Link
                                         className={`nav-link nav-link-motor me-5 pe-5 ${isActive("/adscreen/vehicles") ? "active" : ""}`}
                                         to="/adscreen/vehicles"
                                     >
-                                        <i className="fas fa-car">
-                                            <span className="icon-text">Motors</span>
-                                        </i>
+                                        <span className="hover-car">
+                                            <i className="fas fa-car " style={{ justifyContent: "center", alignItems: "center", display: "flex", backgroundImage: "linear-gradient(to bottom , #e5eaea, #ffffff)" }}></i>
+                                            <p className="icon-text heading-bg">Motors</p>
+                                        </span>
                                     </Link>
                                 </li>
-                                <li className="nav-itemm">
+                                <li className="nav-itemm nav-itemm-build">
                                     <Link
                                         className={`nav-link nav-link-property me-5 pe-5 ${isActive("/adscreen/sale") ? "active" : ""}`}
                                         to="/adscreen/sale"
                                     >
-                                        <i className="fas fa-building">
-                                            <span className="icon-text property">Property</span>
-                                        </i>
+                                        <span >
+                                            <div className="hover-building">
+                                                <i className="fas fa-building" style={{ justifyContent: "center", alignItems: "center", display: "flex", backgroundImage: "linear-gradient(to bottom , #e5eaea, #ffffff)" }}></i>
+                                                <p className="icon-text heading-bg ">Property</p>
+                                            </div>
+                                        </span>
                                     </Link>
+
                                 </li>
 
 

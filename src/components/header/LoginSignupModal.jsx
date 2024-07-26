@@ -5,6 +5,7 @@ import fb from "./images/facebook.png"
 import google from "./images/google.png"
 import email from "./images/email.jpg"
 import phone from "./images/phone.png"
+import { Link } from "react-router-dom";
 
 const LoginSignupModal = ({ isLogin, closeModal, toggleMode }) => {
   return (
@@ -33,27 +34,36 @@ const LoginSignupModal = ({ isLogin, closeModal, toggleMode }) => {
               <button type="button" className="social-button phone-button">
                 <img src={phone} alt="Phone Icon" /> {isLogin ? "Login" : "Sign up"} with Phone
               </button>
-         
-              {!isLogin && (
-  <div className="row terms-container">
-    <input type="checkbox" id="terms-checkbox" className="terms-checkbox" />
-    <label htmlFor="terms-checkbox" className="terms-label">
-      When creating a new account you agree to{" "}
-      <span className="privacy fw-bold">OLX's Terms and Conditions</span> and{" "}
-      <span className="privacy fw-bold">Privacy Policy</span>
-    </label>
-  </div>
-)}
 
-  
-    
+              {!isLogin && (
+                <div className="row terms-container">
+                  <input type="checkbox" id="terms-checkbox" className="terms-checkbox" />
+                  <label htmlFor="terms-checkbox" className="terms-label">
+                    When creating a new account you agree to{" "}
+
+                    <Link target="_blank" to="https://help.olx.com.pk/hc/en-us/articles/4402989977487-What-are-the-terms-of-use">
+                      <span className="privacy fw-bold">OLX's Terms and Conditions</span>
+                    </Link>
+
+                    {" "}and {"  "}
+
+                    <Link target="_blank" to="https://help.olx.com.pk/hc/en-us/categories/4402989237007-Legal-Privacy-information">
+                      <span className="privacy fw-bold">Privacy Policy</span>
+                    </Link>
+
+                  </label>
+                </div>
+              )}
+
+
+
 
             </div>
             <div className="modal-footer">
               <p className="me-5">
                 {isLogin ? "New to OLX?" : "Already have an account?"}
                 <span className="toggle-link" onClick={toggleMode}>
-                  {isLogin  ? " Create an account" : " Login"}
+                  {isLogin ? " Create an account" : " Login"}
                 </span>
               </p>
             </div>
