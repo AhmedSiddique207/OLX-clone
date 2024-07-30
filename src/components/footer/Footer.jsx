@@ -106,7 +106,7 @@ function Footermedium() {
 function Footerbottom() {
     return (
         <div className="footerbottom-main">
-            <h6 className="pt-2 ">Free Classifieds in Pakistan . © 2006-2024 OLX</h6>
+            <h6 className="pt-2 ">Free Classifieds in Pakistan . &copy; 2006-2024 OLX</h6>
         </div>
     )
 }

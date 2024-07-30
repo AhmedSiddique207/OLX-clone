@@ -54,9 +54,9 @@ function Index() {
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
+                            <ul class="navbar-nav ">
 
-                                <li className="nav-itemm nav-itemm-mot">
+                                <li className="nav-itemm nav-itemm-mot ">
                                     <Link
                                         className={`nav-link nav-link-motor me-5 pe-5 ${isActive("/adscreen/vehicles") ? "active" : ""}`}
                                         to="/adscreen/vehicles"
