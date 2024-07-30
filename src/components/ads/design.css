@@ -7,7 +7,8 @@
 .adddcard {
    width: 300px;
    height: 310px;
-   /* background-color: purple; */
+   display: flex;
+margin-right: 2rem;
 
 }
 
@@ -25,7 +26,7 @@
 margin-top: -40px;
 color: #002f34;
 /* justify-content: end; */
-margin-left: 14rem;
+margin-left: 16rem;
 /* border: 2px solid red; */
 width: 15%;
 
@@ -102,6 +103,7 @@ width: 15%;
  .report{
     margin-left: 9rem;
     color: #002f34;
+    cursor: pointer;
  }
  .idd{
     color: #002f34;
@@ -123,6 +125,10 @@ color: #002f34;
  .img-user{
     width: 5rem;
    height: 5rem;
+   cursor: pointer;
+}
+.username-seller{
+    cursor: pointer;
 }
 .user-detailsss{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -136,6 +142,7 @@ color: #002f34;
  .since{
     margin-left: 7rem;
     margin-top: -3rem;
+    cursor: pointer;
  }
  .img-user{
     width: 5rem;

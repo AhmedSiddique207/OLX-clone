@@ -132,10 +132,12 @@ function Index() {
                                     className="btn  signup-width btn sell"
                                     onClick={() => openModal(false)}
                                 >
+                                    
                                     <span>
                                         <i class="fa-solid fa-plus"></i>
                                     </span>
-                                    Sell
+                                  
+                                  {" "}  Sell
                                 </button>
                                 {isModalOpen && (
                                     <LoginSignupModal

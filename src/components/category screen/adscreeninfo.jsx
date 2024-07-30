@@ -105,7 +105,7 @@ const Adscreeninfo = () => {
                         <div className="card-body">
 
                         <img src={user} className='img-user' />
-                        <span class="card-title fw-light user-detailsss " > {item.name} </span>
+                        <span class="card-title fw-light user-detailsss username-seller " > {item.name} </span>
                         <h6 class="card-subtitle  text-body-secondary   since  ">Member since {item.since}</h6>
                         <span className='see-more-arrow'><p className='see-more'>see more</p><i class="fa-solid fa-arrow-right"></i></span>
                            

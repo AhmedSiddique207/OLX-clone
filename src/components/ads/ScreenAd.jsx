@@ -96,7 +96,7 @@ const ScreenAd = () => {
 
                         <h5 className='fw-semibold mt-3 ms-3 fs-4 listed'>Listed By Private User</h5>
                         <div class="card-body">
-                            <img src={user} className='img-user' /><span class="card-title fw-light user-detailsss " > {item.username} </span>
+                            <img src={user} className='img-user' /><span class="card-title fw-light user-detailsss username-seller" > {item.username} </span>
                           
                     
                             <h6 class="card-subtitle  text-body-secondary   since  ">Member since {item.since}</h6>

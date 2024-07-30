@@ -19,26 +19,42 @@
 
 .footertop-divider {
     transform: rotate(90deg);
-    width: 40%;
+    width: 30%;
+    height: 10%;
+
     margin-top: 6rem;
 }
 
 .footertop-dividerheading {
     color: #002f34;
-    margin-left: 7rem;
+    margin-left: 6rem;
     margin-top: -4rem;
     font-weight: 700;
     font-size: small;
 }
 
 .footertop-appgooglegallery {
-    margin-left: 7rem;
-    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.footermedium-appgooglegallery {
+    margin-top: 1rem;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    width: 95%;
+    display: flex;
+    gap: 0.5rem; 
+}
+
+.footermedium-appicons {
+    width: 90px; 
+    height: auto;
 }
 
 .footermedium-row {
     margin-left: 5rem;
-    /* display: inline-block; */
 }
 
 .footermedium-main {
@@ -50,8 +66,6 @@
     text-decoration: none;
     color: #7a7a7ac7;
     font-size: 12px;
-    
-      
 }
 
 .footermedium-links:hover {
@@ -63,16 +77,20 @@
 .footermedium-icons {
     color: #353434c7;
     text-decoration: none;
+
+    
 }
 
-/* .footermedium-icons:hover {
-    color: #353434c7;
-    text-decoration: none;
-} */
-
-.footermedium-appgooglegallery {
-    margin-top: 2rem;
+.footermedium-headings {
+    font-size: 15px;
 }
+
+.footermedium-height-adjust {
+    height: auto; 
+}
+
+
+
 
 .appgooglegallery {
     text-decoration: none;
@@ -85,13 +103,12 @@
     font-family: 'Times New Roman', Times, serif;
     height: 2rem;
     padding-right: 1rem;
-    
-    
-}
-.footerbottom-main h6{
-    font-size: 15px;
-}
-.footermedium-height-adjust{
-    height: 13rem;
+
+
 }
 
+
+.items-medium{
+    display: flex;
+    flex-direction: column;
+}
