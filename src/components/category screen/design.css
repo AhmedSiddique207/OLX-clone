@@ -30,8 +30,8 @@ color: #002f34;
     height: 35rem;
     border-radius: 5px ;
     width: 95%;
-    padding: auto;
-    margin: auto;
+    /* padding: auto;
+    margin: auto; */
     margin-left: 2rem;
     cursor: pointer;
     /* border: 2px solid purple; */
@@ -155,4 +155,24 @@ color: #002f34;
     height: 600px; /* Adjust to desired height */
     border: 2px solid red;
     object-fit: contain;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+
+ 
+  
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: black;
 }

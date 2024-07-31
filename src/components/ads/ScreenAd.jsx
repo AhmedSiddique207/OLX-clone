@@ -12,6 +12,7 @@ import ImageViewer from 'react-simple-image-viewer';
 
 
 
+
 const ScreenAd = () => {
 
 
@@ -59,28 +60,106 @@ const ScreenAd = () => {
                     <div className="item-adscreen">
 
 
-                        <img
+            
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active item-pic">
+    
+    <img
                             src={item?.image}
-                            className="item-picc"
+                            className="d-block w-100"
                             alt={item?.Title}
                             onClick={() => openImageViewer(0)}
-
                         />
 
                         {isViewerOpen && (
-                            <div style={{ cursor: 'pointer' }}>
-                                <ImageViewer
-                                    src={[item?.image]}
-                                    currentIndex={currentImage}
-                                    disableScroll={false}
-                                    closeOnClickOutside={true}
-                                    onClose={closeImageViewer}
-                                    backgroundStyle={{ backgroundColor: "#000000b3" }}
 
+                            <ImageViewer
+                              
+                                src={[item?.image]}
+                                currentIndex={currentImage}
+                                disableScroll={false}
+                                closeOnClickOutside={true}
+                                onClose={closeImageViewer}
+                                backgroundStyle={{ backgroundColor: "#000000b3" }}
+                             
+                            />
 
-                                />
-                            </div>
                         )}
+
+    </div>
+    <div class="carousel-item item-pic">
+      
+    <img
+                            src={item?.image}
+                            className="d-block w-100"
+                            alt={item?.Title}
+                            onClick={() => openImageViewer(0)}
+                        />
+
+                        {isViewerOpen && (
+
+                            <ImageViewer
+                              
+                                src={[item?.image]}
+                                currentIndex={currentImage}
+                                disableScroll={false}
+                                closeOnClickOutside={true}
+                                onClose={closeImageViewer}
+                                backgroundStyle={{ backgroundColor: "#000000b3" }}
+                             
+                            />
+
+                        )}
+
+    </div>
+    <div class="carousel-item item-pic">
+      
+    <img
+                            src={item?.image}
+                            
+                            className="d-block w-100"
+                            alt={item?.Title}
+                            onClick={() => openImageViewer(0)}
+                        />
+
+                        {isViewerOpen && (
+
+                            <ImageViewer
+                              
+                                src={[item?.image]}
+                             
+                                currentIndex={currentImage}
+                                disableScroll={false}
+                                closeOnClickOutside={true}
+                                onClose={closeImageViewer}
+                                backgroundStyle={{ backgroundColor: "#000000b3" }}
+                             
+                            />
+
+                        )}
+
+    </div>
+  </div>
+{!isViewerOpen?(
+     <div className="slider-buttons mt-2">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  </div>)
+  :
+  ( 
+     "")}
+ 
+
+
+
+</div>
 
 
                         {/* <img src={item?.image} className="item-picc" alt={item?.Title} /> */}
