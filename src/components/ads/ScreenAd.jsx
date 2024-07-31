@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useCallback} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { arr } from './data';
 import Index from "../header/Index";
@@ -7,8 +7,14 @@ import Footer from '../footer/Footer';
 import Button from "../Button/button"
 import LoginSignupModal from '../header/LoginSignupModal';
 import user from "./images/usericonpic.png"
+import ImageViewer from 'react-simple-image-viewer';
+
+
 
 const ScreenAd = () => {
+
+
+
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
@@ -28,18 +34,24 @@ const ScreenAd = () => {
     };
 
     const { id } = useParams();
-    console.log("Retrieved ID from params:", id);
+    // console.log("Retrieved ID from params:", id);
     const item = arr.find((item) => item.id === parseInt(id));
-    console.log("Found item:", item);
+    // console.log("Found item:", item);
 
+
+  
     return (
         <div>
             <Index />
             <div className="main-adscreen">
                 {item ? (
                     <div className="item-adscreen">
-                        <img src={item?.image} className="item-pic" alt={item?.Title} />
+    
 
+
+   <img src={item?.image} className="item-picc" alt={item?.Title} />
+                     
+                        
                         <div className="card item-detail-card">
                             <div className="card-body">
                                 <h5 className="card-title fs-1 fw-semibold">{item?.Price}</h5>
@@ -150,3 +162,5 @@ const ScreenAd = () => {
 
 
 export default ScreenAd;
+
+

@@ -5,7 +5,7 @@ import "./design.css"
 import raize from "./images/raize.webp"
 import mghs from "./images/mghs.webp"
 import city from "./images/city.webp"
-import vezel from "./images/vezel.webp"
+import vezel from "./images/vezel.jpeg"
 import eleven from "./images/iphone11.webp"
 import twelevemini from "./images/iphone12mini.webp"
 import tweleve from "./images/iphone12pro.webp"
@@ -30,7 +30,7 @@ export let arr = [
     { id: 1, subtitle: "Toyota Raize  | 2020 | Imported", location: "Gulshan-e-Memar, Karachi ", delivery: "no", brand: "Toyota", condition: "used", Title: "Toyota Raize 2020", Description: "Toyota Raize Imported", Price: "Rs 6,500,000", image: raize, subtitle: "Toyota Raize  | 2020 | Imported", location: "Gulshan-e-Memar, Karachi ", delivery: "no", brand: "Toyota", condition: "used",since:"nov 2007",username:"Ahmed" },
     { id: 2, subtitle: "MG HS | PHEV | 2022", location: "Gulistan-e-Johar, Karachi ", delivery: "Yes", brand: "MG", condition: "New", Title: "MG HS PHEV 2022", Description: "MG HS phev", Price: "Rs 10,500,000", image: mghs, subtitle: "MG HS | PHEV | 2022", location: "Gulistan-e-Johar, Karachi ", delivery: "Yes", brand: "MG", condition: "New",since:"july 2014",username:"Arfeen" },
     { id: 3, subtitle: "Honda City | CVT | 2024", location: "Iqbal Town, Karachi ", delivery: "No", brand: "Honda", condition: "used", Title: "Honda City 1.2 CVT 2024 ", Description: "Honda City CVT", Price: "Rs 6,000,000", image: city, subtitle: "Honda City | CVT | 2024", location: "Iqbal Town, Karachi ", delivery: "no", brand: "Honda", condition: "used",since:"sep 2018",username:"Amin" },
-    { id: 4, subtitle: "Honda Vezel  | Hybrid | 2021", location: "Korangi Town, Karachi ", delivery: "No", brand: "Honda", condition: "New", Title: "Honda Vezel Hybrid 2021", Description: "Honda Vezel Z Pakage", Price: "Rs 11,500,000", image: vezel, subtitle: "Honda Vezel  | Hybrid | 2021", location: "Korangi Town, Karachi ", delivery: "no", brand: "Honda", condition: "New",since:"apr 2020",username:"Talha" },
+    { id: 4, subtitle: "Honda Vezel  | Hybrid | 2021", location: "Korangi Town, Karachi ", delivery: "No", brand: "Honda", condition: "New", Title: "Honda Vezel Hybrid 2021", Description: "Honda Vezel Z Pakage", Price: "Rs 11,500,000", image: vezel, subtitle: "Honda Vezel  | Hybrid | 2021", location: "Korangi Town, Karachi ", delivery: "no", brand: "Honda", condition: "New",since:"apr 2020",username:"Siddique" },
 
     { id: 5, subtitle: "iPhone 11 | Pta Approved | 64gb", location: "Gulshan-e-Iqbal, Karachi ", delivery: "Yes", brand: "iPhone", condition: "used", Title: "iPhone 11", Description: "64gb | Pta Approved", Price: "Rs 75,500", image: eleven, subtitle: "iPhone 11 | Pta Approved | 64gb", location: "Gulshan-e-Iqbal, Karachi ", delivery: "Yes", brand: "iPhone", condition: "used",since:"aug 2002",username:"Adamji" },
     { id: 6, subtitle: "iPhone 15 Pro Max | Factory Unlock | 512gb", location: "Clifton, Karachi ", delivery: "Yes", brand: "iPhone", condition: "New", Title: "iPhone 15 Pro Max", Description: "512gb | Factory unlock", Price: "Rs 525,000", image: fifteen, subtitle: "iPhone 15 Pro Max | Factory Unlock | 512gb", location: "Clifton, Karachi ", delivery: "Yes", brand: "iPhone", condition: "New",since:"aug 2005",username:"Shoaib" },

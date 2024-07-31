@@ -58,7 +58,6 @@ function Footermedium() {
         { link: "https://apps.apple.com/pk/app/olx-pakistan-online-shopping/id1551315538", image: appstore },
         { link: "https://play.google.com/store/apps/details?id=com.olx.pk", image: googleplay },
         { link: "https://appgallery.huawei.com/#/app/C104375435", image: appgallery },
-
         { heading: "POPULAR CATEGORIES", one: "Cars", two: "Flats for rent", three: "Mobile Phones", four: "Jobs" },
         { heading: "TRENDING SEARCHES", one: "Bikes", two: "Watches", three: "Books", four: "Dogs" },
         { heading: "OLX", one: "Help", two: "Sitemap", three: "Terms of use", four: "Privacy Policy" },
@@ -73,7 +72,7 @@ function Footermedium() {
                     <div key={index} className="col-sm-3 footermedium-height-adjust">
                         <h6 className="footermedium-headings fw-bold">{item.heading}</h6>
                         <div className="items-medium">
-                       
+
                             {[item.one, item.two, item.three, item.four].map((linkText, linkIndex) => (
                                 <a key={linkIndex} href="https://www.olx.com.pk" target="_blank" className="footermedium-links">
                                     <p style={{ marginBottom: '.4rem' }}>{linkText}</p>

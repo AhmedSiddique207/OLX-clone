@@ -31,12 +31,13 @@ margin-left: 16rem;
 width: 15%;
 
 }
-.item-pic{
+.item-picc{
     height: 35rem;
     border-radius: 5px ;
     width: 95%;
     padding: auto;
     margin: auto;
+    cursor: pointer;
     margin-left: 2rem;
     /* border: 2px solid purple; */
  
