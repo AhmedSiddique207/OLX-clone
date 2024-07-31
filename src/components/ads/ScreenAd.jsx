@@ -1,4 +1,4 @@
-import React,{useState,useCallback} from 'react';
+import React, { useState, useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { arr } from './data';
 import Index from "../header/Index";
@@ -11,10 +11,12 @@ import ImageViewer from 'react-simple-image-viewer';
 
 
 
+
 const ScreenAd = () => {
 
 
-
+    const [isViewerOpen, setIsViewerOpen] = useState(false);
+    const [currentImage, setCurrentImage] = useState(0);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
@@ -38,20 +40,52 @@ const ScreenAd = () => {
     const item = arr.find((item) => item.id === parseInt(id));
     // console.log("Found item:", item);
 
+    const openImageViewer = useCallback((index) => {
+        setCurrentImage(index);
+        setIsViewerOpen(true);
+    }, []);
 
-  
+    const closeImageViewer = () => {
+        setCurrentImage(0);
+        setIsViewerOpen(false);
+    };
+
+
     return (
         <div>
-            <Index />
+            {!isViewerOpen ? <Index /> : ""}
             <div className="main-adscreen">
                 {item ? (
                     <div className="item-adscreen">
-    
 
 
-   <img src={item?.image} className="item-picc" alt={item?.Title} />
-                     
-                        
+                        <img
+                            src={item?.image}
+                            className="item-picc"
+                            alt={item?.Title}
+                            onClick={() => openImageViewer(0)}
+
+                        />
+
+                        {isViewerOpen && (
+                            <div style={{ cursor: 'pointer' }}>
+                                <ImageViewer
+                                    src={[item?.image]}
+                                    currentIndex={currentImage}
+                                    disableScroll={false}
+                                    closeOnClickOutside={true}
+                                    onClose={closeImageViewer}
+                                    backgroundStyle={{ backgroundColor: "#000000b3" }}
+
+
+                                />
+                            </div>
+                        )}
+
+
+                        {/* <img src={item?.image} className="item-picc" alt={item?.Title} /> */}
+
+
                         <div className="card item-detail-card">
                             <div className="card-body">
                                 <h5 className="card-title fs-1 fw-semibold">{item?.Price}</h5>
@@ -109,30 +143,30 @@ const ScreenAd = () => {
                         <h5 className='fw-semibold mt-3 ms-3 fs-4 listed'>Listed By Private User</h5>
                         <div class="card-body">
                             <img src={user} className='img-user' /><span class="card-title fw-light user-detailsss username-seller" > {item.username} </span>
-                          
-                    
+
+
                             <h6 class="card-subtitle  text-body-secondary   since  ">Member since {item.since}</h6>
                             <span className='see-more-arrow'><p className='see-more'>see more</p><i class="fa-solid fa-arrow-right"></i></span>
-                     {/* real buttons start */}
+                            {/* real buttons start */}
 
 
-                     <Button title={"Show Phone Number"} backgroundColor="#002f34"
-                                    fontColor="#FFFFFF" icon="fa-solid fa-phone"   onClick={() => openModal(true)}/>
+                            <Button title={"Show Phone Number"} backgroundColor="#002f34"
+                                fontColor="#FFFFFF" icon="fa-solid fa-phone" onClick={() => openModal(true)} />
 
-                                <Button title={"Chat"} backgroundColor="#FFFFFF" fontColor="#002f34" icon="fa-regular fa-comment"  onClick={() => openModal(false)}/>
-                        
-                         
-{/* real button end */}
+                            <Button title={"Chat"} backgroundColor="#FFFFFF" fontColor="#002f34" icon="fa-regular fa-comment" onClick={() => openModal(false)} />
 
 
-                             
-                                {isModalOpen && (
-                                    <LoginSignupModal
-                                        isLogin={isLogin}
-                                        closeModal={closeModal}
-                                        toggleMode={toggleMode}
-                                    />
-                                )}
+                            {/* real button end */}
+
+
+
+                            {isModalOpen && (
+                                <LoginSignupModal
+                                    isLogin={isLogin}
+                                    closeModal={closeModal}
+                                    toggleMode={toggleMode}
+                                />
+                            )}
                         </div>
 
 
@@ -150,11 +184,11 @@ const ScreenAd = () => {
                     <span className='idd'>Ad id:{item.id}</span>
                     <span className='report'><i class="fa-regular fa-circle-xmark"></i>  Report this Ad</span>
                 </div>
-         
+
             </div>
-                <span className='footer-span'>
-                    <Footer />
-                </span>
+            <span className='footer-span'>
+                <Footer />
+            </span>
         </div>
     )
 };

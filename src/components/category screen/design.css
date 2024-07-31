@@ -65,6 +65,7 @@ color: #002f34;
     justify-content: space-between;
     /* border: 2px solid red; */
 }
+
 .item-adscreen{
     width: 70%;
     /* border: 2px solid red; */
@@ -149,3 +150,9 @@ color: #002f34;
  .see-more-arrow{
     cursor: pointer;
  }
+.image-viewer{
+    width: 800px ;/* Adjust to desired width */
+    height: 600px; /* Adjust to desired height */
+    border: 2px solid red;
+    object-fit: contain;
+}
