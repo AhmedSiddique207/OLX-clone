@@ -118,7 +118,7 @@ const ScreenAd = () => {
     <img
                             src={item?.image}
                             
-                            className="d-block w-100"
+                            className="d-block w-100 "
                             alt={item?.Title}
                             onClick={() => openImageViewer(0)}
                         />
@@ -154,7 +154,8 @@ const ScreenAd = () => {
   </div>)
   :
   ( 
-     "")}
+     "")
+     }
  
 
 
