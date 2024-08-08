@@ -37,7 +37,7 @@ export default function Adslider() {
 
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-  <Link to="https://help.olx.com.pk/hc/en-us/articles/4403031554703-What-are-Featured-Ads" target='_blank'>
+  <Link to="https://www.olx.com.pk/myads?utm_source=CLM-OLX&utm_medium=house-ads&utm_campaign=feature-ad" target='_blank'>
     <div class="carousel-item active ">
       <img src={stwo} class=" d-block ps-2 w-70 rounded" alt="..."/>
     </div>

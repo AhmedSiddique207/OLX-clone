@@ -1,3 +1,5 @@
+
+  
 .moreAds-heading {
     font-weight: 550;
     font-family: sans-serif;
@@ -7,7 +9,7 @@
 
 .adddcard {
     width: 300px;
-    height: 310px;
+    height: 320px;
     display: flex;
     margin-right: 2rem;
 
@@ -35,26 +37,18 @@
 
 }
 
-.item-picc {
-    height: 37rem;
-    border-radius: 5px;
-    width: 95%;
-    padding: auto;
-    margin: auto;
-    cursor: pointer;
-    
-    /* border: 2px solid purple; */
 
 
-}
 
-.item-detail-card {
+
+.item-detail-cardd {
     border-radius: 5px;
     width: 95%;
     padding: auto;
     margin: auto;
     margin-left: 2rem;
-    margin-top: 1rem;
+    /* border: 2px solid red; */
+    margin-top: 4rem;
 
 
 
@@ -189,6 +183,8 @@
     cursor: pointer;
 }
 
+
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
 
@@ -198,13 +194,45 @@
 }
 
 .carousel-control-next-icon:after {
-    content: '>';
+    content: ">";
     font-size: 55px;
-    color: black;
+    color: white;
+    margin-left: 4rem;
 }
 
 .carousel-control-prev-icon:after {
-    content: '<';
+    content: "<";
     font-size: 55px;
-    color: black;
+    color: white;
+    margin-left: -4rem;
+}
+
+.open-left,.open-right{
+    color: white;
+    cursor: pointer;
+    
+}
+.item-picc {
+    height: 38rem;
+    justify-content: space-around;
+    width: 75%;
+    margin-left: 85px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+    
+    
+}
+.background-carousel-image{
+    display: flex;
+
+height: 36rem;
+margin-left: 2rem;
+cursor: pointer;
+}
+.border-left,.border-right{
+    width: 97%;
+    background-color: black;
+    height: 38rem;
 }

@@ -4,7 +4,7 @@ import { arr } from './data';
 import "./design.css"
 
 const AdsDetails = () => {
-
+    
     const onClickHandler = () => {
 
     };
@@ -46,3 +46,5 @@ const AdsDetails = () => {
 };
 
 export default AdsDetails;
+
+

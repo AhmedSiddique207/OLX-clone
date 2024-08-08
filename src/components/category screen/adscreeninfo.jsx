@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { mobile, vehicles, sale, rent, electronics, bikes, business, services, jobs, animals, furniture, fashion, books, kids } from './data';
 import "./design.css";
@@ -10,6 +10,13 @@ import user from "./extra images/usericonpic.png"
 import ImageViewer from 'react-simple-image-viewer';
 
 const Adscreeninfo = () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+    });
+
+
     const [isViewerOpen, setIsViewerOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(0);
 
@@ -63,6 +70,27 @@ const Adscreeninfo = () => {
         setCurrentImage(0);
         setIsViewerOpen(false);
     };
+    useEffect(() => {
+        const carousel = document.getElementById('carouselExample');
+        if (carousel) {
+            if (isViewerOpen) {
+                carousel.classList.add('carousel-frozen');
+            } else {
+                carousel.classList.remove('carousel-frozen');
+            }
+        }
+    }, [isViewerOpen]);
+
+    const images = [item?.image, item?.image, item?.image];
+    const formatCurrency = (value) => {
+        return value.toLocaleString('en-US', {
+          style: 'currency',
+          currency: 'PKR',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        }).replace('PKR', '');
+      };
+    
     return (
         <div>
             {!isViewerOpen ? <Index /> : ""}
@@ -70,140 +98,63 @@ const Adscreeninfo = () => {
 
             <div className="main-adscreen " >
                 {item ? (
-                    <div className="item-adscreen">
-
-
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active item-pic">
-    
-    <img
-                            src={item?.image}
-                            className="d-block w-100"
-                            alt={item?.Title}
-                            onClick={() => openImageViewer(0)}
-                        />
-
-                        {isViewerOpen && (
-
-                            <ImageViewer
-                              
-                                src={[item?.image]}
-                                currentIndex={currentImage}
-                                disableScroll={false}
-                                closeOnClickOutside={true}
-                                onClose={closeImageViewer}
-                                backgroundStyle={{ backgroundColor: "#000000b3" }}
-                             
-                            />
-
-                        )}
-
-    </div>
-    <div class="carousel-item item-pic">
-      
-    <img
-                            src={item?.image}
-                            className="d-block w-100"
-                            alt={item?.Title}
-                            onClick={() => openImageViewer(0)}
-                        />
-
-                        {isViewerOpen && (
-
-                            <ImageViewer
-                              
-                                src={[item?.image]}
-                                currentIndex={currentImage}
-                                disableScroll={false}
-                                closeOnClickOutside={true}
-                                onClose={closeImageViewer}
-                                backgroundStyle={{ backgroundColor: "#000000b3" }}
-                             
-                            />
-
-                        )}
-
-    </div>
-    <div class="carousel-item item-pic">
-      
-    <img
-                            src={item?.image}
-                            className="d-block w-100"
-                            alt={item?.Title}
-                            onClick={() => openImageViewer(0)}
-                        />
-
-                        {isViewerOpen && (
-
-                            <ImageViewer
-                              
-                                src={[item?.image]}
-                                currentIndex={currentImage}
-                                disableScroll={false}
-                                closeOnClickOutside={true}
-                                onClose={closeImageViewer}
-                                backgroundStyle={{ backgroundColor: "#000000b3" }}
-                             
-                            />
-
-                        )}
-
-    </div>
-  </div>
-{!isViewerOpen?(
-     <div className="slider-buttons mt-2">
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-  </div>)
-  :
-  ( 
-     "")}
- 
-
-
-
+                 <div className="item-adscreen">
+                 <div className="background-carousel-image">
+                     <div className="border-left">
+                     <div className="border-right">
+         <div id="carouselExample" className={`carousel slide ${isViewerOpen ? 'carousel-frozen' : ''}`}>
+             <div className="carousel-inner">
+                 {images.map((image, index) => (
+                     image ? (
+                         <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                             <img
+                                 src={image}
+                                 className="d-block item-picc"
+                                 alt={`Slide ${index}`}
+                                 onClick={() => openImageViewer(index)}
+                             />
+                         </div>
+                     ) : null
+                 ))}
+                 </div>
+             {!isViewerOpen && (
+                 <div className="slider-buttons mt-2">
+                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                         <span className="visually-hidden">Previous</span>
+                     </button>
+                     <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                         <span className="visually-hidden ">Next</span>
+                     </button>
+                 </div>
+             )}
+             </div>
+             </div>
 </div>
+         </div>
 
-
-
-
-
-
-{/*                         
-                        <img
-                            src={item?.image}
-                            className="item-picc"
-                            alt={item?.Title}
-                            onClick={() => openImageViewer(0)}
-                        />
 
                         {isViewerOpen && (
-
-                            <ImageViewer
-                              
-                                src={[item?.image]}
-                                currentIndex={currentImage}
-                                disableScroll={false}
-                                closeOnClickOutside={true}
-                                onClose={closeImageViewer}
-                                backgroundStyle={{ backgroundColor: "#000000b3" }}
-                             
-                            />
-
-                        )} */}
+                            <>
+                                <ImageViewer
+                                    src={images}
+                                    currentIndex={currentImage}
+                                    disableScroll={false}
+                                    closeOnClickOutside={true}
+                                    onClose={closeImageViewer}
+                                    rightArrowComponent={<i class="fa-solid fa-chevron-right open-right"></i>}
+                                    leftArrowComponent={<i class="fa-solid fa-chevron-left open-left"></i>}
+                                    backgroundStyle={{ backgroundColor: "#000000b3" }}
+                                />
+                            </>
+                        )}
 
                         {/* <img src={item.image} className="item-pic" alt={item.Title} /> */}
 
-                        <div className="card item-detail-card">
+                        <div className="card item-detail-carddd">
                             <div className="card-body">
-                                <h5 className="card-title fs-1 fw-semibold">{item.Price}</h5>
+                                <h5 className="card-title fs-1 fw-semibold">Rs {formatCurrency(item?.Price)}</h5>
                                 <h6 className="card-subtitle mb-2 text-body-secondary mt-3">{item.subtitle}</h6>
                                 <p className="card-text mt-3">
                                     <i className="fas fa-location-dot"></i> &nbsp; {item.location}
