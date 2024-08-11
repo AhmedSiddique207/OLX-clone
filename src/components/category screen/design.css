@@ -391,20 +391,42 @@ margin-left: 3rem;
         margin-bottom: 10px;
         font-size: 14px;
         color: #333;
+        margin-top: -10px;
       }
-      
+      .currency {
+        margin-right: -152px;
+        
+      }
+      .currency-max {
+        margin-top: -30.5px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #333;
+      }
+      .currency-max {
+        margin-right: -152px;
+        
+      }
+      .currency-min {
+        margin-top: -10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #333;
+      }
+      .currency-min {
+        margin-right: 174px;
+      }
       .slider {
         width: 100%;
         border: 2px solid #002f34;
       border-radius: 2px ;
       }
-      .currency {
-        margin-right: -152px;
-      }
+
       .last-selling-div{
         background-color: #3a77ff;
-        height: 15rem;
-        border-radius: 3px;
+        height: 13rem;
+        width: 100%;
+        border-radius: 5px;
         color: white;
         display: flex;
         flex-direction: column;
@@ -415,9 +437,15 @@ margin-left: 3rem;
       .last-selling-div h5{
         font-weight: 700;
         font-size: medium;
+        justify-content: center;
       }
       .last-selling-div p{
-        font-size: medium;
+        font-size: 14px;
+        line-height: 18px;
+        justify-content: center;
+        align-items: center;
+        font-weight:450;
+        align-self: center;
       }
       .filter-button-div{
         width: 15rem;
@@ -474,3 +502,24 @@ cursor: pointer;
 
 
 }
+.slider {
+    width: 100%;
+    height: 5px;
+    background-color: #002f34;
+
+  }
+  
+  .custom-thumb {
+    background: none;
+    cursor: pointer;
+  }
+  
+  .filter-ball {
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
+    background-color: white; 
+    border: 2px solid #002f34; 
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); 
+    margin-top: -8px;
+  }

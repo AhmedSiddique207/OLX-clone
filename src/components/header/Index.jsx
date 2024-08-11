@@ -1,14 +1,18 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import { Link, useLocation,useParams } from "react-router-dom";
 import logo from "./images/OLX-logo.png";
 import "./style.css";
+
 import Nav from "../navbar/nav";
 import LoginSignupModal from "./LoginSignupModal";
 
 function Index() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
+
+
     const location = useLocation();
+    const { type } = useParams();
 
     const openModal = (isLogin) => {
         setIsLogin(isLogin);
@@ -27,17 +31,16 @@ function Index() {
         return location.pathname === path;
     };
 
+    
+
+
     return (
         <>
 
             <div className="fixed-upper">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a
-                            class="navbar-brand olx me-5 pe-5"
-                            href="https://olx.com.pk"
-                            target="_blank"
-                        >
+                        <a class="navbar-brand olx me-5 pe-5" href="https://lapify.site/">
                             <span className="olx">
                                 <img src={logo} alt="OLX Logo" />
                             </span>
@@ -110,6 +113,8 @@ function Index() {
                                 type="search"
                                 placeholder="Find Cars,Mobile Phones and more..."
                                 aria-label="Search"
+                          
+                                
                             />
                             <a href="#" className="search-mag">
                                 {" "}

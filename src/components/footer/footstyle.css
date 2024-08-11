@@ -100,11 +100,14 @@
     background-color: #002f34;
     color: white;
     text-align: end;
-    font-family: 'Times New Roman', Times, serif;
-    height: 2rem;
-    padding-right: 1rem;
-
-
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-size: 13px;
+    font-weight: bold;
+    height: 3rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 30px;
 }
 
 

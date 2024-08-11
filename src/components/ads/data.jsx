@@ -45,7 +45,7 @@ import recliner from "./images/recliner.jfif"
 
 
 
-export let arr = [
+ export  let arr = [
    
     { id: 1, subtitle: "Toyota Raize  | 2020 | Imported", location: "Gulshan-e-Memar, Karachi ", delivery: "no", brand: "Toyota", condition: "used", Title: "Toyota Raize 2020", Description: "Toyota Raize Imported", Price: "Rs 6,500,000", image: raize, subtitle: "Toyota Raize  | 2020 | Imported", location: "Gulshan-e-Memar, Karachi ", delivery: "no", brand: "Toyota", condition: "used",since:"nov 2007",username:"Ahmed",imagetwo:raizetwo,imagethree:raizethree },
     { id: 2, subtitle: "MG HS | PHEV | 2022", location: "Gulistan-e-Johar, Karachi ", delivery: "Yes", brand: "MG", condition: "New", Title: "MG HS PHEV 2022", Description: "MG HS phev", Price: "Rs 10,500,000", image: mghs, subtitle: "MG HS | PHEV | 2022", location: "Gulistan-e-Johar, Karachi ", delivery: "Yes", brand: "MG", condition: "New",since:"july 2014",username:"Arfeen",imagetwo:mghstwo,imagethree:mghsthree },
@@ -77,6 +77,7 @@ export let arr = [
 
 
 ]
+
 
 
 
