@@ -1,18 +1,39 @@
-import React, { useState,useEffect } from "react";
-import { Link, useLocation,useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
 import logo from "./images/OLX-logo.png";
 import "./style.css";
-
+import { mobile, vehicles, sale, rent, electronics, bikes, business, services, jobs, animals, furniture, fashion, books, kids } from '../category screen/data';
 import Nav from "../navbar/nav";
 import LoginSignupModal from "./LoginSignupModal";
+import Search from "../Search Screen/Search";
 
 function Index() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
-
-
+    const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
     const { type } = useParams();
+
+    const allData = [
+        ...mobile,
+        ...vehicles,
+        ...sale,
+        ...rent,
+        ...electronics,
+        ...bikes,
+        ...business,
+        ...services,
+        ...jobs,
+        ...animals,
+        ...furniture,
+        ...fashion,
+        ...books,
+        ...kids,
+    ];
+
+    const filteredItem = allData.filter((item) =>
+        item.Title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
     const openModal = (isLogin) => {
         setIsLogin(isLogin);
@@ -31,22 +52,26 @@ function Index() {
         return location.pathname === path;
     };
 
-    
+    const handleSearchChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
 
+    const handleSearchSubmit = (e) => {
+        e.preventDefault(); 
+    };
 
     return (
         <>
-
             <div className="fixed-upper">
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="navbar-brand olx me-5 pe-5" href="https://lapify.site/">
+                <nav className="navbar navbar-expand-lg">
+                    <div className="container-fluid">
+                        <a className="navbar-brand olx me-5 pe-5" href="https://lapify.site/">
                             <span className="olx">
                                 <img src={logo} alt="OLX Logo" />
                             </span>
                         </a>
                         <button
-                            class="navbar-toggler"
+                            className="navbar-toggler"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbarNav"
@@ -54,11 +79,10 @@ function Index() {
                             aria-expanded="false"
                             aria-label="Toggle navigation"
                         >
-                            <span class="navbar-toggler-icon"></span>
+                            <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ">
-
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav ">
                                 <li className="nav-itemm nav-itemm-mot ">
                                     <Link
                                         className={`nav-link nav-link-motor me-5 pe-5 ${isActive("/adscreen/vehicles") ? "active" : ""}`}
@@ -82,21 +106,17 @@ function Index() {
                                             </div>
                                         </span>
                                     </Link>
-
                                 </li>
-
-
-
                             </ul>
                         </div>
                     </div>
                 </nav>
 
-                <nav class="navbar secondary-tab">
-                    <div class="container-fluid">
-                        <div class="select-container">
-                            <i class="fas fa-location-dot"></i>
-                            <select name="options" id="options" class="fw-semibold">
+                <nav className="navbar secondary-tab">
+                    <div className="container-fluid">
+                        <div className="select-container">
+                            <i className="fas fa-location-dot"></i>
+                            <select name="options" id="options" className="fw-semibold">
                                 <option value="option1">Select Location</option>
                                 <option value="option2">Sindh</option>
                                 <option value="option3">Punjab</option>
@@ -104,45 +124,39 @@ function Index() {
                                 <option value="option5">Balochistan</option>
                                 <option value="option6">Gilgit Baltistan</option>
                             </select>
-                            <i class="fa-solid fa-caret-down"></i>
+                            <i className="fa-solid fa-caret-down"></i>
                         </div>
 
-                        <form class="d-flex search" role="search">
+                        <form className="d-flex search" role="search" onSubmit={handleSearchSubmit}>
                             <input
-                                class="search-bar"
+                                className="search-bar"
                                 type="search"
-                                placeholder="Find Cars,Mobile Phones and more..."
+                                placeholder="Find Cars, Mobile Phones and more..."
                                 aria-label="Search"
-                          
-                                
+                                onChange={handleSearchChange}
+                                value={searchQuery}
                             />
-                            <a href="#" className="search-mag">
-                                {" "}
-                                <button class="search-icon" type="submit">
-                                    {" "}
-                                    <i class="fas fa-magnifying-glass"></i>
-                                </button>
-                            </a>
+                            <button className="search-icon" type="submit">
+                                <i className="fas fa-magnifying-glass"></i>
+                            </button>
 
                             <div className="login-sell">
                                 <button
                                     type="button"
-                                    className="btn  login-width btn login fw-bold"
+                                    className="btn login-width btn login fw-bold"
                                     onClick={() => openModal(true)}
                                 >
                                     Login
                                 </button>
                                 <button
                                     type="button"
-                                    className="btn  signup-width btn sell"
+                                    className="btn signup-width btn sell"
                                     onClick={() => openModal(false)}
                                 >
-                                    
                                     <span>
-                                        <i class="fa-solid fa-plus"></i>
+                                        <i className="fa-solid fa-plus"></i>
                                     </span>
-                                  
-                                  {" "}  Sell
+                                    {" "} Sell
                                 </button>
                                 {isModalOpen && (
                                     <LoginSignupModal
@@ -157,15 +171,17 @@ function Index() {
                 </nav>
             </div>
 
-            <div className="main-content ">
-
-                <hr className=" hr-index" />
+            <div className="main-content">
+                <hr className="hr-index" />
                 <div className="ms-1 pt-3">
                     <Nav />
                 </div>
+                <Search searchQuery={searchQuery} filteredItem={filteredItem} />
             </div>
         </>
     );
 }
 
 export default Index;
+
+
