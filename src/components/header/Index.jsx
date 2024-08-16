@@ -5,16 +5,18 @@ import "./style.css";
 import { mobile, vehicles, sale, rent, electronics, bikes, business, services, jobs, animals, furniture, fashion, books, kids } from '../category screen/data';
 import Nav from "../navbar/nav";
 import LoginSignupModal from "./LoginSignupModal";
-import Search from "../Search Screen/Search";
+import Testing from "../SearchedData";
+
 
 function Index() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(true);
-    const [searchQuery, setSearchQuery] = useState('');
+    const [searchQuery,setSearchQuery]=useState('')
     const location = useLocation();
     const { type } = useParams();
 
     const allData = [
+    
         ...mobile,
         ...vehicles,
         ...sale,
@@ -29,7 +31,10 @@ function Index() {
         ...fashion,
         ...books,
         ...kids,
+  
+        
     ];
+    
 
     const filteredItem = allData.filter((item) =>
         item.Title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -124,8 +129,9 @@ function Index() {
                                 <option value="option5">Balochistan</option>
                                 <option value="option6">Gilgit Baltistan</option>
                             </select>
-                            <i className="fa-solid fa-caret-down"></i>
+                            <i className="fa-solid fa-caret-down "></i>
                         </div>
+                        
 
                         <form className="d-flex search" role="search" onSubmit={handleSearchSubmit}>
                             <input
@@ -176,7 +182,9 @@ function Index() {
                 <div className="ms-1 pt-3">
                     <Nav />
                 </div>
-                <Search searchQuery={searchQuery} filteredItem={filteredItem} />
+                
+             <Testing searchQuery={searchQuery} filteredItem={filteredItem} />
+             
             </div>
         </>
     );

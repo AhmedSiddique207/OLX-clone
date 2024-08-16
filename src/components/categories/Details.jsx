@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { Category } from "./Category";
 import { Link } from "react-router-dom";
 
+
+
 export default function Details() {
     const onClickHandler = () => {};
 
@@ -35,6 +37,7 @@ export default function Details() {
                     ))}
                 </div>
             </div>
+            
         </div>
     );
 }
