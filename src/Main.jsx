@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Homepage from "./Homepage";
-// import Searchpage from "./Searchpage";
+import React from "react";
+
+import Index from './components/Login Screen/Index'
 function Main() {
   
 
@@ -8,8 +8,7 @@ function Main() {
 
     <div >
  
- 
- <Homepage/>
+ <Index/> 
 
 
     </div>

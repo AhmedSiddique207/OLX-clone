@@ -1,0 +1,109 @@
+/* Container for the entire component */
+.post-containerrr {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Header styles */
+
+
+.welcome-text {
+    font-size: 16px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.titleee {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.subtitleee {
+    font-size: 18px;
+    color: grey;
+}
+
+/* Navbar styles */
+.navbarrrr {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-linksss {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-linksss li {
+    margin: 0 15px;
+}
+
+.nav-linksss a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-linksss a:hover {
+    color: #000;
+}
+
+/* Main content styles */
+.main-contenttt {
+    margin-top: 20px;
+}
+
+.main-contenttt h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttonssss {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.add-user-btn,
+.clear-users-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-user-btn {
+    background: linear-gradient(to right, #76a6f9, #6e78f7);
+    color: white;
+}
+
+.clear-users-btn {
+    background: linear-gradient(to right, #f76e6e, #f97676);
+    color: white;
+}
+
+/*table styling*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

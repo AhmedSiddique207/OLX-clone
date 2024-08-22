@@ -6,7 +6,10 @@ import { mobile, vehicles, sale, rent, electronics, bikes, business, services, j
 import Nav from "../navbar/nav";
 import LoginSignupModal from "./LoginSignupModal";
 import Testing from "../SearchedData";
-
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from '../../features/LoginSlice';
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Index() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,7 +67,21 @@ function Index() {
     const handleSearchSubmit = (e) => {
         e.preventDefault(); 
     };
-
+    const currentUser = useSelector((state) => state.login.currentUser);
+    const dispatch = useDispatch();
+    const navigate = useNavigate(); 
+  
+    const handleLogout = () => {
+      console.log('Logout button clicked');
+      dispatch(logout());
+      alert('Logout');
+    };
+  
+    useEffect(() => {
+      if (!currentUser) {
+        navigate("/"); 
+      }
+    }, [currentUser, navigate]);
     return (
         <>
             <div className="fixed-upper">
@@ -150,9 +167,9 @@ function Index() {
                                 <button
                                     type="button"
                                     className="btn login-width btn login fw-bold"
-                                    onClick={() => openModal(true)}
+                                    onClick={handleLogout}
                                 >
-                                    Login
+                                    Logout
                                 </button>
                                 <button
                                     type="button"

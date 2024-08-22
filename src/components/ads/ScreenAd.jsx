@@ -8,6 +8,7 @@ import Button from "../Button/button";
 import LoginSignupModal from '../header/LoginSignupModal';
 import user from "./images/usericonpic.png";
 import ImageViewer from 'react-simple-image-viewer';
+import Todos from '../Counter';
 
 const ScreenAd = () => {
     window.scrollTo({
@@ -60,7 +61,14 @@ const ScreenAd = () => {
     const images = [item?.image,item?.imagetwo,item?.imagethree];
 
 
-
+    const formatCurrency = (value) => {
+        return value.toLocaleString('en-US', {
+          style: 'currency',
+          currency: 'PKR',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        }).replace('PKR', '');
+      };
 
    
 
@@ -126,7 +134,7 @@ const ScreenAd = () => {
 
                         <div className="card item-detail-cardd ">
                             <div className="card-body ">
-                                <h5 className="card-title fs-1 fw-semibold">{item?.Price}</h5>
+                                <h5 className="card-title fs-1 fw-semibold">Rs{formatCurrency(item?.Price)}</h5>
                                 <h6 className="card-subtitle mb-2 text-body-secondary mt-3">{item?.subtitle}</h6>
                                 <p className="card-text mt-3">
                                     <i className="fas fa-location-dot"></i> &nbsp; {item?.location}
@@ -175,7 +183,7 @@ const ScreenAd = () => {
                         <h5 className='fw-semibold mt-3 ms-3 fs-4 listed'>Listed By Private User</h5>
                         <div className="card-body">
                             <img src={user} className='img-user' alt="User" />
-                            <span className="card-title fw-light user-detailsss username-seller"> {item.username} </span>
+                            <span className="card-title fw-light user-detailsss username-seller"> {item.name} </span>
                             <h6 className="card-subtitle text-body-secondary since">Member since {item.since}</h6>
                             <span className='see-more-arrow'>
                                 <p className='see-more'>see more</p><i className="fa-solid fa-arrow-right"></i>
@@ -202,6 +210,7 @@ const ScreenAd = () => {
                     <span className='report'><i className="fa-regular fa-circle-xmark"></i> Report this Ad</span>
                 </div>
             </div>
+            
             <span className='footer-span'>
                 <Footer />
             </span>
