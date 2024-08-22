@@ -127,12 +127,12 @@ body {
     display: flex;
     align-items: center;
     flex: 1;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .search-bar {
     border-radius: 3px 0 0 3px;
-    width: 80%;
+    width: 100%;
     height: 3rem;
     border: 1px solid #ccc;
     border-right: none;
@@ -144,8 +144,8 @@ body {
 
     background-color: #002f34;
     color: white;
-    border-radius: 0 3px 3px 0;
-    width: 3rem;
+    border-radius: 0 5px 5px 0;
+    width: 4rem;
     height: 3.1rem;
     display: flex;
     justify-content: center;
@@ -153,12 +153,12 @@ body {
     border: 1px solid #ccc;
     border-left: none;
     padding: 0.5rem;
-    margin-right: 6rem;
+    margin-right: rem;
 }
 
 .search-mag {
     text-decoration: none;
-    width: 5%;
+    width: 5%
     /* border: 2px solid red; */
 }
 
@@ -170,6 +170,7 @@ body {
 
 .login-width {
     width: 25%;
+    
 }
 
 .login {
